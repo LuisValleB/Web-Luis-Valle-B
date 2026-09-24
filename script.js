@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initStats();
     initTimeline();
     initSelection();
-    initSponsors();
     initPressAndVideos();
     initContact();
     initScrollEffects();
