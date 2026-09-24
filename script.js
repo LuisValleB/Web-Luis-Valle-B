@@ -31,8 +31,8 @@ function initTarGallery() {
     athleteData.tarGallery.forEach((imgSrc, index) => {
         const wrap = document.createElement('div');
         wrap.className = 'tar-thumb-wrapper';
-        wrap.innerHTML = `<img src="public/Transalpine Run 2026/${imgSrc}" alt="Transalpine Run 2026 Image ${index + 1}" loading="lazy">`;
-        wrap.addEventListener('click', () => openLightbox(index, athleteData.tarGallery, 'public/Transalpine Run 2026/'));
+        wrap.innerHTML = `<img src="/Transalpine Run 2026/${imgSrc}" alt="Transalpine Run 2026 Image ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.tarGallery, '/Transalpine Run 2026/'));
         container.appendChild(wrap);
     });
 
@@ -46,8 +46,8 @@ function initTorrencialGallery() {
     athleteData.torrencialGallery.forEach((imgSrc, index) => {
         const wrap = document.createElement('div');
         wrap.className = 'tar-thumb-wrapper';
-        wrap.innerHTML = `<img src="public/Torrencial Valdivia 2026/${imgSrc}" alt="Torrencial 2026 Image ${index + 1}" loading="lazy">`;
-        wrap.addEventListener('click', () => openLightbox(index, athleteData.torrencialGallery, 'public/Torrencial Valdivia 2026/'));
+        wrap.innerHTML = `<img src="/Torrencial Valdivia 2026/${imgSrc}" alt="Torrencial 2026 Image ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.torrencialGallery, '/Torrencial Valdivia 2026/'));
         container.appendChild(wrap);
     });
 }
