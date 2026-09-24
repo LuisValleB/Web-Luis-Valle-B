@@ -59,32 +59,57 @@ ul { list-style: none; }
 .nav-links a:hover { color: var(--color-accent-orange); }
 .nav-shop { background: var(--color-accent-orange); padding: 8px 16px; border-radius: 4px; color: #fff !important; }
 
-/* ================== HERO ================== */
+/* ================== HERO (KILIAN STYLE) ================== */
 .hero {
     height: 100vh; min-height: 600px; position: relative;
     display: flex; align-items: center; justify-content: center;
-    background-image: url("public/TAR%2026_S7_Carles%20Iturbe%20-9995.jpg");
+    background-image: url("/TAR%2026_S7_Carles%20Iturbe%20-9995.jpg");
     background-size: cover; background-position: center; background-attachment: fixed;
 }
 .hero-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to top, var(--color-bg-main) 0%, rgba(253,253,249,0.8) 50%, rgba(253,253,249,0.95) 100%);
+    background: rgba(43, 43, 43, 0.3); /* Un sombreado más cálido/tenue */
 }
-.hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; padding: 0 20px; }
-.hero h1 { font-size: 5rem; line-height: 1.1; margin: 20px 0; letter-spacing: 2px; }
-.hero h1 span { color: var(--color-accent-orange); }
-.claim { font-size: 1.5rem; color: var(--color-text-muted); font-style: italic; margin-bottom: 30px; }
-.hero-stats { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; }
-.stat-item { text-align: center; }
-.stat-number { display: block; font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--color-text-main); }
-.stat-label { font-size: 0.85rem; text-transform: uppercase; color: var(--color-accent-orange); letter-spacing: 1px; }
+.hero-content { position: relative; z-index: 1; text-align: center; width: 100%; padding: 0 20px; }
+.hero-location { font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: var(--color-gold); text-transform: uppercase; letter-spacing: 6px; margin-bottom: 5px; font-weight: normal; }
+.hero h1 { font-family: 'Oswald', sans-serif; font-size: 9rem; line-height: 0.95; margin: 0; letter-spacing: 2px; color: var(--color-bg-main); text-transform: uppercase; }
+.hero h1 span { color: var(--color-bg-main); }
+.claim { font-size: 1.5rem; color: var(--color-bg-main); opacity: 0.9; font-style: italic; max-width: 600px; margin: 20px auto 0; }
+
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-accent-orange);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    z-index: 2;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-15px) translateX(-50%); }
+    60% { transform: translateY(-7px) translateX(-50%); }
+}
+
+/* Quick Stats Section */
+.quick-stats-section {
+    background: var(--color-bg-main);
+    padding: 80px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.quick-stats-section .badges { text-align: center; margin-bottom: 40px; }
+.quick-stats-section .hero-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 60px; }
+.quick-stats-section .stat-item { text-align: center; }
+.quick-stats-section .stat-number { display: block; font-size: 3.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--color-accent-orange); line-height: 1; margin-bottom: 5px; }
+.quick-stats-section .stat-label { font-size: 0.9rem; text-transform: uppercase; color: var(--color-text-muted); letter-spacing: 1px; }
 
 /* Buttons */
-.btn { display: inline-block; padding: 12px 30px; font-family: var(--font-heading); text-transform: uppercase; font-size: 1rem; border-radius: 4px; cursor: pointer; border: 2px solid transparent; }
+.btn { display: inline-block; padding: 12px 30px; font-family: var(--font-heading); text-transform: uppercase; font-size: 1rem; border-radius: 4px; cursor: pointer; border: 2px solid transparent; transition: var(--transition); }
 .btn-primary { background: var(--color-accent-orange); color: #fff; }
 .btn-primary:hover { background: transparent; border-color: var(--color-accent-orange); color: var(--color-accent-orange); }
-.btn-secondary { background: transparent; border-color: var(--color-text-main); color: var(--color-text-main); margin-left: 15px; }
-.btn-secondary:hover { background: var(--color-text-main); color: var(--color-bg-main); }
+.btn-secondary { background: transparent; border-color: rgba(255,255,255,0.5); color: #fff; margin-left: 15px; }
+.btn-secondary:hover { background: #fff; color: #000; }
 
 /* ================== TRANSALPINE RUN EPIC HIGHLIGHT ================== */
 .tar-epic { background: var(--color-accent-green); color: #fff; padding: 100px 20px; position: relative; }
@@ -120,7 +145,7 @@ ul { list-style: none; }
 .tar-btn:hover { background: transparent; color: #fff; border-color: #fff; }
 
 /* ================== TORRENCIAL EPIC HIGHLIGHT ================== */
-.torrencial-epic { background: #0b132b; color: #fff; padding: 100px 20px; position: relative; }
+.torrencial-epic { background: #232d3b; color: rgba(255,255,255,0.9); padding: 100px 20px; position: relative; }
 .torrencial-epic-header { text-align: center; margin-bottom: 50px; }
 .tor-badge { display: inline-block; background: #3a506b; color: #fff; padding: 6px 20px; border-radius: 30px; font-weight: bold; font-size: 0.95rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
 .torrencial-epic-header h2 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 15px; color: #fff; letter-spacing: -1px; }
@@ -256,14 +281,19 @@ footer { background: var(--color-accent-green); color: #fff; padding: 30px 20px;
 }
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero h1 { font-size: 2.5rem; }
+    /* Mobile Hero (Kilian Style) */
+    .hero h1 { font-size: 4.5rem; letter-spacing: 0px; }
+    .hero-location { font-size: 0.9rem; letter-spacing: 2px; }
+    .claim { font-size: 1.2rem; }
+    .quick-stats-section .hero-stats { gap: 30px; flex-direction: column; }
+    .quick-stats-section .stat-number { font-size: 2.5rem; }
+
     .tar-epic-header h2 { font-size: 2.2rem; }
     .torrencial-epic-header h2 { font-size: 2.2rem; }
     .tar-quote { font-size: 1.5rem; }
     .tar-stats-grid { grid-template-columns: 1fr; }
     .tar-stat-val { font-size: 2.5rem; }
-    .hero-stats { flex-direction: column; gap: 20px; }
-    .btn-secondary { margin-left: 0; margin-top: 15px; display: block; }
+    .tar-full-gallery { gap: 5px; margin-top: 10px; }
     .timeline-container::before { left: 20px; }
     .timeline-item { justify-content: flex-start; padding-right: 0; padding-left: 50px; width: 100%; }
     .timeline-item:nth-child(even) { padding-left: 50px; }
