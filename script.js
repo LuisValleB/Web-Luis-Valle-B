@@ -31,11 +31,13 @@ function initTarGallery() {
     athleteData.tarGallery.forEach((imgSrc, index) => {
         const wrap = document.createElement('div');
         wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
         wrap.innerHTML = `<img src="/Transalpine Run 2026/${imgSrc}" alt="Transalpine Run 2026 Image ${index + 1}" loading="lazy">`;
         wrap.addEventListener('click', () => openLightbox(index, athleteData.tarGallery, '/Transalpine Run 2026/'));
         container.appendChild(wrap);
     });
 
+    if (athleteData.tarGallery.length > 6) addLoadMoreButton(container);
     setupLightboxEvents();
 }
 
@@ -46,10 +48,31 @@ function initTorrencialGallery() {
     athleteData.torrencialGallery.forEach((imgSrc, index) => {
         const wrap = document.createElement('div');
         wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
         wrap.innerHTML = `<img src="/Torrencial Valdivia 2026/${imgSrc}" alt="Torrencial 2026 Image ${index + 1}" loading="lazy">`;
         wrap.addEventListener('click', () => openLightbox(index, athleteData.torrencialGallery, '/Torrencial Valdivia 2026/'));
         container.appendChild(wrap);
     });
+    
+    if (athleteData.torrencialGallery.length > 6) addLoadMoreButton(container);
+}
+
+function addLoadMoreButton(container) {
+    const btnContainer = document.createElement('div');
+    btnContainer.style.textAlign = 'center';
+    btnContainer.style.gridColumn = '1 / -1';
+    btnContainer.style.marginTop = '10px';
+
+    const btn = document.createElement('button');
+    btn.className = 'btn btn-secondary';
+    btn.textContent = 'Ver más fotos';
+    btn.onclick = () => {
+        const hiddenThumbs = container.querySelectorAll('.tar-thumb-wrapper[style*="display: none"]');
+        hiddenThumbs.forEach(thumb => thumb.style.display = 'block');
+        btnContainer.style.display = 'none';
+    };
+    btnContainer.appendChild(btn);
+    container.appendChild(btnContainer);
 }
 
 function setupLightboxEvents() {
