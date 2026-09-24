@@ -19,7 +19,7 @@ export const athleteData = {
         youtube: "https://www.youtube.com/@luisvallebarrientos",
         whatsapp: "https://wa.me/qr/XZFAEBVPLJ2RA1",
         utmb: "https://utmb.world/es/runner/487396.luis.vallebarrientos",
-        itra: "https://itra.run/api/RunnerSpace/GetRunnerSpace?memberString=XWx7slL7Ce00uMkPH2%2FW1A%3D%3D",
+        itra: "https://itra.run/RunnerSpace/valle.luis.487396",
         strava: "https://www.strava.com/athletes/2534523",
         shop: "https://pacul.cl/"
     },
