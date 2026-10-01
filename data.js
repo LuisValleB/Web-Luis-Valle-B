@@ -3,11 +3,11 @@ export const athleteData = {
         name: "Luis Alejandro Valle Barrientos",
         shortName: "Luis Valle",
         origin: "Montenegro, Comuna de Til-Til, Región Metropolitana, Chile",
-        discipline: "Trail running, ultra trail, kilómetro vertical, montaña",
+        discipline: "Trail running, ultra trail, kilómetro vertical",
         started: 2012,
         phrase: "Desde los cerros de Montenegro a las montañas del mundo.",
         recognitions: [
-            "Hijo Ilustre de la Comuna de Til Til 2024/2025",
+            "Hijo Ilustre de la Comuna de Til Til",
             "8 veces seleccionado nacional de trail running",
             "Antorcha Parapanamericana 2023 (portador)"
         ]
@@ -125,7 +125,7 @@ export const athleteData = {
         { year: 2017, race: "Hill Trail Cerro Carbón", distance: "-", position: "1° General", country: "Chile", highlight: false },
         { year: 2017, race: "Trail Running Codegua", distance: "-", position: "2° General", country: "Chile", highlight: false },
         { year: 2017, race: "Trail Mesetas de Jahuel", distance: "12K", position: "2° General", country: "Chile", highlight: false },
-        { year: 2017, race: "Corrida Vertical Costanera Center", distance: "62 pisos", position: "1° General", country: "Chile", highlight: true },
+        { year: 2017, race: "Corrida Vertical Costanera Center (edificio más alto de Sudamérica)", distance: "62 pisos", position: "1° General (9 mins)", country: "Chile", highlight: true },
         { year: 2017, race: "Trail Running Cabildo", distance: "12K", position: "1° General", country: "Chile", highlight: false },
         { year: 2017, race: "Trail Running Alhué", distance: "35K", position: "1° General", country: "Chile", highlight: false },
         { year: 2017, race: "Hill Trail Cerro Pochoco", distance: "-", position: "1° General", country: "Chile", highlight: false },
@@ -138,7 +138,7 @@ export const athleteData = {
         { year: 2017, race: "Campeonato Sudamericano Trail Running", distance: "42K", position: "5° General, 1° por equipos", country: "Argentina", highlight: true },
         { year: 2017, race: "Circuito Hill Trail Chile", distance: "Circuito", position: "Campeón", country: "Chile", highlight: true },
 
-        { year: 2018, race: "Selectivo Mundial Ultra Trail Portugal (Futangue)", distance: "62K", position: "1°", country: "Chile", highlight: false },
+        { year: 2018, race: "Selectivo Mundial Ultra Trail Portugal (Futangue)", distance: "62K", position: "1°", country: "Chile", highlight: true },
         { year: 2018, race: "Climbing Tour Picarquín", distance: "-", position: "2° General Trail", country: "Chile", highlight: false },
         { year: 2018, race: "Desafío La Cruz, Cabildo", distance: "-", position: "1° General", country: "Chile", highlight: false },
         { year: 2018, race: "Mundial de Ultra Trail Running", distance: "85K", position: "DNF (km 51)", country: "España", highlight: false },
@@ -152,19 +152,19 @@ export const athleteData = {
 
         { year: 2019, race: "Selectivo Mundial Ultra Trail Portugal (Futangue)", distance: "62K", position: "1°", country: "Chile", highlight: false },
         { year: 2019, race: "Santiago 21K", distance: "21K", position: "1h11'50''", country: "Chile", highlight: false },
-        { year: 2019, race: "Selectivo Mundial Ultra Trail Portugal (Huilo Huilo)", distance: "44K", position: "1°", country: "Chile", highlight: false },
+        { year: 2019, race: "Selectivo Mundial Ultra Trail Portugal (Huilo Huilo)", distance: "44K", position: "1°", country: "Chile", highlight: true },
         { year: 2019, race: "Magma Trail", distance: "28K", position: "1° General", country: "Chile", highlight: false },
         { year: 2019, race: "Desafío La Cruz, Cabildo", distance: "-", position: "1° General", country: "Chile", highlight: false },
         { year: 2019, race: "Climbing Tour Parque Cantillana", distance: "-", position: "1° General Trail", country: "Chile", highlight: false },
         { year: 2019, race: "Trail Running Alhué", distance: "35K", position: "1° General", country: "Chile", highlight: false },
-        { year: 2019, race: "Mundial de Ultra Trail Running", distance: "-", position: "54° del mundo", country: "Portugal", highlight: true },
+        { year: 2019, race: "Mundial de Ultra Trail Running", distance: "-", position: "54° del mundo, 5° sudamericano, 1° chileno", country: "Portugal", highlight: true },
         { year: 2019, race: "Torrencial Valdivia", distance: "25K", position: "1°", country: "Chile", highlight: false },
         { year: 2019, race: "Campeonato Nacional Huichahue Trail Cunco", distance: "40K", position: "1° General", country: "Chile", highlight: true },
         { year: 2019, race: "Trail Run UC", distance: "21K", position: "1° General", country: "Chile", highlight: false },
         { year: 2019, race: "Salomon Trail Challenge", distance: "30K", position: "1° General", country: "Chile", highlight: false },
         { year: 2019, race: "Trail Parque Cordillera", distance: "12K", position: "1° General", country: "Chile", highlight: false },
         { year: 2019, race: "TNF Endurance Challenge", distance: "21K", position: "1° General", country: "Chile", highlight: false },
-        { year: 2019, race: "Mundial de Trail Running", distance: "-", position: "29° del mundo", country: "Argentina", highlight: true },
+        { year: 2019, race: "Mundial de Trail Running", distance: "-", position: "29° del mundo, 3° sudamericano, 1° chileno", country: "Argentina", highlight: true },
         { year: 2019, race: "Vulcano Ultra Trail", distance: "100K", position: "1° General", country: "Chile", highlight: true },
 
         { year: 2020, race: "Pucón Trail Run", distance: "12K", position: "1° General", country: "Chile", highlight: false },
@@ -252,5 +252,16 @@ export const athleteData = {
         "TAR2026@AndiFrank_18662.jpg",
         "TAR2026@AndiFrank_18669.jpg",
         "TAR2026@AndiFrank_18679.jpg"
+    ],
+    k42Gallery: [
+        "1000174601.webp",
+        "1000174602.webp",
+        "1000174711.jpg",
+        "Asics-K42-Banco-Nacion-12-1536x865.webp",
+        "Asics-K42-Banco-Nacion-3-1536x865.webp",
+        "IMG_20251110_073906_886.jpg",
+        "IMG_20251110_073916_144.jpg",
+        "IMG_20251110_074014_943.jpg",
+        "jpgarcia.photo2.jpeg"
     ]
 };

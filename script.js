@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initTarGallery();
     initTorrencialGallery();
+    initK42Gallery();
 });
 
 let currentImageIndex = 0;
@@ -54,6 +55,22 @@ function initTorrencialGallery() {
     });
     
     if (athleteData.torrencialGallery.length > 6) addLoadMoreButton(container);
+}
+
+function initK42Gallery() {
+    const container = document.getElementById('k42-gallery-container');
+    if (!container || !athleteData.k42Gallery) return;
+
+    athleteData.k42Gallery.forEach((imgSrc, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
+        wrap.innerHTML = `<img src="/k42/${imgSrc}" alt="K42 Villa La Angostura 2025 Image ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.k42Gallery, '/k42/'));
+        container.appendChild(wrap);
+    });
+    
+    if (athleteData.k42Gallery.length > 6) addLoadMoreButton(container);
 }
 
 function addLoadMoreButton(container) {
