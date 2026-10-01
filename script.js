@@ -199,6 +199,21 @@ function initStats() {
 let currentFilter = 'all';
 let timelineLimit = 10;
 
+function getFlagHtml(country) {
+    const map = {
+        'Chile': '<img src="/banderas/bandera chile.webp" alt="Chile" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Argentina': '<img src="/banderas/bandera argentina.webp" alt="Argentina" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Suiza': '<img src="/banderas/bandera suiza.svg" alt="Suiza" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Portugal': '<img src="https://flagcdn.com/w20/pt.png" alt="Portugal" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'España': '<img src="https://flagcdn.com/w20/es.png" alt="España" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Uruguay': '<img src="https://flagcdn.com/w20/uy.png" alt="Uruguay" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Ecuador': '<img src="https://flagcdn.com/w20/ec.png" alt="Ecuador" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Francia': '<img src="https://flagcdn.com/w20/fr.png" alt="Francia" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Bolivia': '<img src="https://flagcdn.com/w20/bo.png" alt="Bolivia" style="height:12px; margin-right:4px; vertical-align:middle;">'
+    };
+    return map[country] || '';
+}
+
 function renderTimeline(filterType = 'all', showAll = false) {
     const container = document.getElementById('timeline-container');
     container.innerHTML = '';
@@ -240,6 +255,8 @@ function renderTimeline(filterType = 'all', showAll = false) {
         else if (r.position.includes('2°')) posClass = 'tl-pos-2';
         else if (r.position.includes('3°')) posClass = 'tl-pos-3';
 
+        const flagHtml = getFlagHtml(r.country);
+
         item.innerHTML = `
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -247,7 +264,7 @@ function renderTimeline(filterType = 'all', showAll = false) {
                 <h3 class="tl-race">${r.race}</h3>
                 <div class="tl-meta">
                     <span>${r.distance}</span>
-                    <span>${r.country}</span>
+                    <span>${flagHtml}${r.country}</span>
                     <span class="tl-position ${posClass}">${r.position}</span>
                 </div>
             </div>

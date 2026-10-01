@@ -56,7 +56,7 @@ export const athleteData = {
         }
     ],
     videos: [
-        "Q1flh29GPWE", "C-ynNEddBa0", "HyGQhBxgddE", "b_Dq5n9c0xM", "sIECUDPdJP4", "Xy9qOdhArmw", "vxQuEBrtcwo", "BTqZizDGWxU", "rxwhTsK4lD8"
+        "sIECUDPdJP4", "Q1flh29GPWE", "C-ynNEddBa0", "HyGQhBxgddE", "b_Dq5n9c0xM", "Xy9qOdhArmw", "vxQuEBrtcwo", "BTqZizDGWxU", "rxwhTsK4lD8"
     ],
     press: [
         { title: "Entrevista con La Voz del Trail 1", link: "https://www.instagram.com/p/CBb4-b3J6_2/" },
