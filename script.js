@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTarGallery();
     initTorrencialGallery();
     initK42Gallery();
+    initCascadaGallery();
 });
 
 let currentImageIndex = 0;
@@ -71,6 +72,22 @@ function initK42Gallery() {
     });
     
     if (athleteData.k42Gallery.length > 6) addLoadMoreButton(container);
+}
+
+function initCascadaGallery() {
+    const container = document.getElementById('cascada-gallery-container');
+    if (!container || !athleteData.cascadaGallery) return;
+
+    athleteData.cascadaGallery.forEach((imgSrc, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
+        wrap.innerHTML = `<img src="/Cascada Trail 2026/${imgSrc}" alt="Cascada Trail 2026 Image ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.cascadaGallery, '/Cascada Trail 2026/'));
+        container.appendChild(wrap);
+    });
+    
+    if (athleteData.cascadaGallery.length > 6) addLoadMoreButton(container);
 }
 
 function addLoadMoreButton(container) {

@@ -64,7 +64,8 @@ export const athleteData = {
         { title: "Hijo Ilustre Til Til (video)", link: "https://www.youtube.com/watch?v=sIECUDPdJP4" },
         { title: "Cobertura Runchile — Quito Trail by UTMB", link: "https://runchile.cl/luis-valle-3en-los-50k-del-quito-trail-by-utmb-todos-los-chilenos/" },
         { title: "Cobertura Runchile — Torrencial Valdivia 2024", link: "https://runchile.cl/torrencial-valdivia-2024-fue-una-fiesta-del-trail-running/" },
-        { title: "Cobertura Runchile — Putaendo", link: "https://runchile.cl/el-trail-running-lleno-putaendo-de-la-mano-de-latitud-sur-expedition-y-merrell/" }
+        { title: "Cobertura Runchile — Putaendo", link: "https://runchile.cl/el-trail-running-lleno-putaendo-de-la-mano-de-latitud-sur-expedition-y-merrell/" },
+        { title: "TVN — Cascada Trail by Jetour 2026", link: "https://www.tvn.cl/deportes/polideportivo/cascada-trail-by-jetour-2026-reunio-a-mas-de-750-corredores-en-el-cajon" }
     ],
     selections: [
         { year: 2017, event: "Sudamericano de Trail", location: "Argentina", flag: "", result: "5° General, 1° por equipos (42K)" },
@@ -216,7 +217,8 @@ export const athleteData = {
         { year: 2026, race: "Kutralkura Trail (Selectiva)", distance: "35K", position: "2° General", country: "Chile", highlight: true },
         { year: 2026, race: "Puesco Trail (Selectiva)", distance: "30K", position: "2° General", country: "Chile", highlight: true },
         { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA)", distance: "106km", position: "1° General", country: "Chile", highlight: true },
-        { year: 2026, race: "Dynafit Transalpine Run (7 Etapas)", distance: "258km", position: "1° General", country: "Suiza", highlight: true }
+        { year: 2026, race: "Dynafit Transalpine Run (7 Etapas)", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
+        { year: 2026, race: "Cascada Trail by Jetour", distance: "30K", position: "1° General", country: "Chile", highlight: true }
     ],
     torrencialGallery: [
         "PSX_20260630_185747.jpg", "PSX_20260630_185853.jpg", "PSX_20260630_190041.jpg", "PSX_20260630_190301.jpg", 
@@ -263,5 +265,10 @@ export const athleteData = {
         "IMG_20251110_073916_144.jpg",
         "IMG_20251110_074014_943.jpg",
         "jpgarcia.photo2.jpeg"
+    ],
+    cascadaGallery: [
+        "33DF34F2-5F32-4426-88EE-B0BF7D2E76E6.png",
+        "PSX_20261006_165916.jpg",
+        "Screenshot_20261006_165648_Drive.jpg"
     ]
 };
