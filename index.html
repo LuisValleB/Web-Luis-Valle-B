@@ -113,8 +113,71 @@
         </div>
     </section>
 
+    <!-- Últimos Desafíos -->
+    <section class="latest-challenges section-reveal" id="latest">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo último de Luis</h2>
+                <span class="accent-line"></span>
+                <p>Repasa las últimas grandes victorias y reconocimientos.</p>
+            </div>
+            
+            <div class="latest-grid">
+                <!-- Cascada Trail 2026 -->
+                <div class="latest-card">
+                    <img src="/Cascada Trail 2026/33DF34F2-5F32-4426-88EE-B0BF7D2E76E6.png" alt="Cascada Trail" class="latest-img">
+                    <div class="latest-info">
+                        <h3>Cascada Trail 2026</h3>
+                        <p>Victoria nacional en los 30K, parte del Campeonato Nacional de Skyrunning en el Cajón del Maipo.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleEpic('cascada-trail-2026')">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- Transalpine Run 2026 -->
+                <div class="latest-card">
+                    <img src="/TAR 26_S7_Carles Iturbe -9995.jpg" alt="Transalpine Run" class="latest-img">
+                    <div class="latest-info">
+                        <h3>Transalpine Run 2026</h3>
+                        <p>Ganador absoluto cruzando los Alpes Suizos en 7 etapas y 244 km junto a los mejores del mundo.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleEpic('tar2026')">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- Torrencial Valdivia 2026 -->
+                <div class="latest-card">
+                    <img src="/Torrencial Valdivia 2026/PSX_20260630_185747.jpg" alt="Torrencial" class="latest-img">
+                    <div class="latest-info">
+                        <h3>Torrencial Chile by UTMB</h3>
+                        <p>Primer lugar en los 100K de la carrera de invierno más importante de Chile, en la selva valdiviana.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleEpic('torrencial2026')">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- K42 -->
+                <div class="latest-card">
+                    <img src="/k42/1000174601.webp" alt="K42" class="latest-img">
+                    <div class="latest-info">
+                        <h3>K42 Villa La Angostura</h3>
+                        <p>Primer lugar en la emblemática maratón de montaña en Argentina, demostrando experiencia y estrategia.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleEpic('k42-2025')">Ver más</button>
+                    </div>
+                </div>
+
+                <!-- Hijo Ilustre -->
+                <div class="latest-card">
+                    <img src="https://img.youtube.com/vi/sIECUDPdJP4/maxresdefault.jpg" alt="Hijo Ilustre" class="latest-img">
+                    <div class="latest-info">
+                        <h3>Hijo Ilustre de Til Til</h3>
+                        <p>Reconocimiento oficial por llevar el nombre de Montenegro y la comuna a cada rincón del mundo.</p>
+                        <button class="btn btn-primary btn-sm" onclick="toggleEpic('hijo-ilustre')">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Cascada Trail 2026 Epic Highlight -->
-    <section class="torrencial-epic cascada-epic" id="cascada-trail-2026">
+    <section class="torrencial-epic cascada-epic epic-section" id="cascada-trail-2026">
         <div class="container">
             <div class="torrencial-epic-header">
                 <span class="tor-badge">Triunfo Nacional</span>
@@ -174,7 +237,7 @@
     </section>
 
     <!-- Transalpine Run 2026 Epic Highlight -->
-    <section class="tar-epic" id="tar2026">
+    <section class="tar-epic epic-section" id="tar2026">
         <div class="container">
             <div class="tar-epic-header">
                 <img src="/logos/logo transalpine run.jpg" alt="Transalpine Run Logo" class="brand-logo-tar">
@@ -262,92 +325,127 @@
                 <div class="tar-stage-list">
                     <div class="tar-stage">
                         <div class="tar-st-num">1</div>
-                        <div class="tar-st-info">
-                            <strong>1° lugar</strong> | Lenzerheide → Arosa → Lenzerheide <br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>18.59 km</strong> | <strong>D+ 1160m</strong> | <strong>D- 1149m</strong> | <strong>1h 42m 44s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'32" • R. Esfuerzo: 4'01" • Mejor Km: 3'06" • FC: 159 ppm • Carga: 413 TL • Cal: 1006 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/19935814327" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>1° lugar</strong> | Lenzerheide → Arosa → Lenzerheide <br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>18.59 km</strong> | <strong>D+ 1160m</strong> | <strong>D- 1149m</strong> | <strong>1h 42m 44s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'32" • R. Esfuerzo: 4'01" • Mejor Km: 3'06" • FC: 159 ppm • Carga: 413 TL • Cal: 1006 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/19935814327" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 100px; height: 178px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="100" height="178" src="https://www.youtube.com/embed/DjvWpXjxtes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">2</div>
-                        <div class="tar-st-info">
-                            <strong>2° lugar</strong> | Lenzerheide → Ilanz<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>51.21 km</strong> | <strong>D+ 1961m</strong> | <strong>D- 2714m</strong> | <strong>4h 25m 30s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'11" • R. Esfuerzo: 4'23" • Mejor Km: 3'27" • FC: 154 ppm • Carga: 796 TL • Cal: 2490 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/19946151630" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>2° lugar</strong> | Lenzerheide → Ilanz<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>51.21 km</strong> | <strong>D+ 1961m</strong> | <strong>D- 2714m</strong> | <strong>4h 25m 30s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'11" • R. Esfuerzo: 4'23" • Mejor Km: 3'27" • FC: 154 ppm • Carga: 796 TL • Cal: 2490 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/19946151630" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 100px; height: 178px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="100" height="178" src="https://www.youtube.com/embed/pWgspBom8Is" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">3</div>
-                        <div class="tar-st-info">
-                            <strong>2° lugar</strong> | Ilanz → Vrin<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>29.42 km</strong> | <strong>D+ 2173m</strong> | <strong>D- 1429m</strong> | <strong>3h 03m 38s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 6'15" • R. Esfuerzo: 4'23" • Mejor Km: 2'54" • FC: 155 ppm • Carga: 576 TL • Cal: 1746 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/19959435403" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>2° lugar</strong> | Ilanz → Vrin<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>29.42 km</strong> | <strong>D+ 2173m</strong> | <strong>D- 1429m</strong> | <strong>3h 03m 38s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 6'15" • R. Esfuerzo: 4'23" • Mejor Km: 2'54" • FC: 155 ppm • Carga: 576 TL • Cal: 1746 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/19959435403" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 100px; height: 178px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="100" height="178" src="https://www.youtube.com/embed/YhiAJFHtGLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">4</div>
-                        <div class="tar-st-info">
-                            <strong>1° lugar</strong> | Vrin → Olivone<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>38.73 km</strong> | <strong>D+ 2146m</strong> | <strong>D- 2689m</strong> | <strong>3h 48m 47s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'54" • R. Esfuerzo: 4'40" • Mejor Km: 3'02" • FC: 143 ppm • Carga: 497 TL • Cal: 1950 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/19974281466" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>1° lugar</strong> | Vrin → Olivone<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>38.73 km</strong> | <strong>D+ 2146m</strong> | <strong>D- 2689m</strong> | <strong>3h 48m 47s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'54" • R. Esfuerzo: 4'40" • Mejor Km: 3'02" • FC: 143 ppm • Carga: 497 TL • Cal: 1950 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/19974281466" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 160px; height: 90px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="160" height="90" src="https://www.youtube.com/embed/Uosu5B9LLh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">5</div>
-                        <div class="tar-st-info">
-                            <strong>1° lugar</strong> | Olivone → Biasca<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>35.25 km</strong> | <strong>D+ 1985m</strong> | <strong>D- 2459m</strong> | <strong>3h 36m 19s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 6'08" • R. Esfuerzo: 4'46" • Mejor Km: 3'44" • FC: 138 ppm • Carga: 399 TL • Cal: 1754 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/19991184715" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>1° lugar</strong> | Olivone → Biasca<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>35.25 km</strong> | <strong>D+ 1985m</strong> | <strong>D- 2459m</strong> | <strong>3h 36m 19s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 6'08" • R. Esfuerzo: 4'46" • Mejor Km: 3'44" • FC: 138 ppm • Carga: 399 TL • Cal: 1754 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/19991184715" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 100px; height: 178px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="100" height="178" src="https://www.youtube.com/embed/5jDoBczt-W4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">6</div>
-                        <div class="tar-st-info">
-                            <strong>1° lugar</strong> | Biasca → Sonogono<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>29.78 km</strong> | <strong>D+ 2078m</strong> | <strong>D- 1566m</strong> | <strong>3h 31m 46s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 7'07" • R. Esfuerzo: 5'08" • Mejor Km: 3'52" • FC: 136 ppm • Carga: 357 TL • Cal: 1683 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/20002604333" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>1° lugar</strong> | Biasca → Sonogono<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>29.78 km</strong> | <strong>D+ 2078m</strong> | <strong>D- 1566m</strong> | <strong>3h 31m 46s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 7'07" • R. Esfuerzo: 5'08" • Mejor Km: 3'52" • FC: 136 ppm • Carga: 357 TL • Cal: 1683 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/20002604333" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 100px; height: 178px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="100" height="178" src="https://www.youtube.com/embed/zkg-dPQOEiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="tar-stage">
                         <div class="tar-st-num">7</div>
-                        <div class="tar-st-info">
-                            <strong>1° lugar</strong> | Sonogono → Locarno (Etapa Final)<br>
-                            <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>41.79 km</strong> | <strong>D+ 1878m</strong> | <strong>D- 2570m</strong> | <strong>4h 09m 15s</strong></span><br>
-                            <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'58" • R. Esfuerzo: 5'03" • Mejor Km: 3'31" • FC: 132 ppm • Carga: 383 TL • Cal: 1905 kcal</span>
-                            <div style="margin-top: 5px;">
-                                <a href="https://www.strava.com/activities/20018922548" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
-                                    <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
-                                </a>
+                        <div class="tar-st-info" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <strong>1° lugar</strong> | Sonogono → Locarno (Etapa Final)<br>
+                                <span style="color: var(--color-text-main); font-size: 1.05rem;"><strong>41.79 km</strong> | <strong>D+ 1878m</strong> | <strong>D- 2570m</strong> | <strong>4h 09m 15s</strong></span><br>
+                                <span style="color: var(--color-text-muted); font-size: 0.82rem;">Ritmo: 5'58" • R. Esfuerzo: 5'03" • Mejor Km: 3'31" • FC: 132 ppm • Carga: 383 TL • Cal: 1905 kcal</span>
+                                <div style="margin-top: 5px; display: flex; gap: 15px;">
+                                    <a href="https://www.strava.com/activities/20018922548" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #FC4C02; font-size: 0.8rem; text-decoration: none; font-weight: bold;">
+                                        <img src="/logos/logo strava.webp" alt="Strava" style="height: 16px;"> Ver Actividad
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="border-radius: 6px; overflow: hidden; width: 160px; height: 90px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                                <iframe width="160" height="90" src="https://www.youtube.com/embed/JbHasOk3NOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -368,6 +466,7 @@
             </blockquote>
             
             <div class="tar-actions">
+                <a href="https://utmb.world/es/utmb-index/races/66144.transalpineruntarsolo.2026" target="_blank" rel="noopener noreferrer" class="btn btn-secondary tar-btn">Resultados Oficiales UTMB</a>
                 <a href="/Transalpine%20Run%202026/certificate2351.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary tar-btn">Ver Certificado Oficial</a>
             </div>
 
@@ -378,7 +477,7 @@
     </section>
 
     <!-- Torrencial Chile by UTMB 2026 Epic Highlight -->
-    <section class="torrencial-epic" id="torrencial2026">
+    <section class="torrencial-epic epic-section" id="torrencial2026">
         <div class="container">
             <div class="torrencial-epic-header">
                 <img src="/logos/logo torrencial valdivia.jpg" alt="Torrencial Valdivia Logo" class="brand-logo-torrencial">
@@ -443,7 +542,7 @@
     </section>
 
     <!-- K42 Villa La Angostura Epic Highlight -->
-    <section class="torrencial-epic" id="k42-2025" style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
+    <section class="torrencial-epic epic-section" id="k42-2025" style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
         <div class="container">
             <div class="torrencial-epic-header">
                 <span class="tor-badge">Victoria Internacional</span>
@@ -494,7 +593,7 @@
     </section>
 
     <!-- Hijo Ilustre Epic Highlight -->
-    <section class="torrencial-epic" id="hijo-ilustre" style="background: linear-gradient(135deg, #111, #222);">
+    <section class="torrencial-epic epic-section" id="hijo-ilustre" style="background: linear-gradient(135deg, #111, #222);">
         <div class="container">
             <div class="torrencial-epic-header">
                 <span class="tor-badge">Reconocimiento Oficial</span>

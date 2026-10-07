@@ -1,6 +1,28 @@
 import { athleteData } from './data.js';
 
+window.toggleEpic = function(id) {
+    // Hide all epic sections
+    document.querySelectorAll('.epic-section').forEach(el => {
+        el.classList.remove('active');
+    });
+    // Show the requested one
+    const target = document.getElementById(id);
+    if (target) {
+        target.classList.add('active');
+        // Scroll to it
+        const headerOffset = 60;
+        const offsetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+};
+
+// Force page to start at the top on reload
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
     initHero();
     initStats();
     initTimeline();
