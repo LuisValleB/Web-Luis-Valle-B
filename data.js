@@ -68,14 +68,14 @@ export const athleteData = {
         { title: "TVN — Cascada Trail by Jetour 2026", link: "https://www.tvn.cl/deportes/polideportivo/cascada-trail-by-jetour-2026-reunio-a-mas-de-750-corredores-en-el-cajon" }
     ],
     selections: [
-        { year: 2017, event: "Sudamericano de Trail", location: "Argentina", flag: "", result: "5° General, 1° por equipos (42K)" },
-        { year: 2018, event: "Mundial de Ultra Trail Running", location: "España", flag: "", result: "DNF en km 51 (85K)" },
-        { year: 2018, event: "Sudamericano de Trail Running", location: "Uruguay", flag: "", result: "1° General, campeón sudamericano (41K)" },
-        { year: 2019, event: "Mundial de Ultra Trail Running", location: "Portugal", flag: "", result: "54° del mundo, 5° sudamericano, 1° chileno" },
-        { year: 2019, event: "Mundial de Trail Running", location: "Argentina", flag: "", result: "29° del mundo, 3° sudamericano, 1° chileno" },
-        { year: 2020, event: "Sudamericano de Trail Running", location: "Chile", flag: "", result: "Seleccionado (Sin resultado oficial provisto)" },
-        { year: 2023, event: "Mundial de Trail Running", location: "Austria", flag: "", result: "Seleccionado (Sin resultado oficial provisto)" },
-        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "", result: "7° General (43K)" }
+        { year: 2017, event: "Sudamericano de Trail", location: "Argentina", flag: "/banderas/bandera argentina.webp", result: "5° General, 1° por equipos (42K)" },
+        { year: 2018, event: "Mundial de Ultra Trail Running", location: "España", flag: "/banderas/bandera espana.svg", result: "DNF en km 51 (85K)" },
+        { year: 2018, event: "Sudamericano de Trail Running", location: "Uruguay", flag: "/banderas/bandera uruguay.svg", result: "1° General, campeón sudamericano (41K)" },
+        { year: 2019, event: "Mundial de Ultra Trail Running", location: "Portugal", flag: "/banderas/bandera portugal.svg", result: "54° del mundo, 5° sudamericano, 1° chileno" },
+        { year: 2019, event: "Mundial de Trail Running", location: "Argentina", flag: "/banderas/bandera argentina.webp", result: "29° del mundo, 3° sudamericano, 1° chileno" },
+        { year: 2020, event: "Sudamericano de Trail Running", location: "Chile", flag: "/banderas/bandera chile.webp", result: "Cancelado por pandemia" },
+        { year: 2023, event: "Mundial de Trail Running", location: "Austria", flag: "/banderas/bandera austria.svg", result: "Lugar 62 (45K)" },
+        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "/banderas/bandera bolivia.svg", result: "7° General (43K)" }
     ],
     results: [
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
@@ -185,6 +185,7 @@ export const athleteData = {
         { year: 2023, race: "Sprint Vertical Catemu", distance: "-", position: "2° General", country: "Chile", highlight: false },
         { year: 2023, race: "Campeonato Nacional Nahuelbuta", distance: "30K", position: "1° General", country: "Chile", highlight: true },
         { year: 2023, race: "Desafío Quillayquén", distance: "21K", position: "1° General", country: "Chile", highlight: false },
+        { year: 2023, race: "Mundial de Trail Running", distance: "45K", position: "Lugar 62", country: "Austria", highlight: true },
         { year: 2023, race: "Maratón de Temuco", distance: "10K", position: "2° General", country: "Chile", highlight: false },
 
         { year: 2024, race: "Futangue Challenge", distance: "60K", position: "DNF (km 30)", country: "Chile", highlight: false },

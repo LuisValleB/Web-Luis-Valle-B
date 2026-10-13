@@ -243,12 +243,13 @@ function getFlagHtml(country) {
         'Chile': '<img src="/banderas/bandera chile.webp" alt="Chile" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Argentina': '<img src="/banderas/bandera argentina.webp" alt="Argentina" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Suiza': '<img src="/banderas/bandera suiza.svg" alt="Suiza" style="height:12px; margin-right:4px; vertical-align:middle;">',
-        'Portugal': '<img src="https://flagcdn.com/w20/pt.png" alt="Portugal" style="height:12px; margin-right:4px; vertical-align:middle;">',
-        'España': '<img src="https://flagcdn.com/w20/es.png" alt="España" style="height:12px; margin-right:4px; vertical-align:middle;">',
-        'Uruguay': '<img src="https://flagcdn.com/w20/uy.png" alt="Uruguay" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Portugal': '<img src="/banderas/bandera portugal.svg" alt="Portugal" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'España': '<img src="/banderas/bandera espana.svg" alt="España" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Uruguay': '<img src="/banderas/bandera uruguay.svg" alt="Uruguay" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Ecuador': '<img src="https://flagcdn.com/w20/ec.png" alt="Ecuador" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Francia': '<img src="https://flagcdn.com/w20/fr.png" alt="Francia" style="height:12px; margin-right:4px; vertical-align:middle;">',
-        'Bolivia': '<img src="https://flagcdn.com/w20/bo.png" alt="Bolivia" style="height:12px; margin-right:4px; vertical-align:middle;">'
+        'Bolivia': '<img src="/banderas/bandera bolivia.svg" alt="Bolivia" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Austria': '<img src="/banderas/bandera austria.svg" alt="Austria" style="height:12px; margin-right:4px; vertical-align:middle;">'
     };
     return map[country] || '';
 }
@@ -341,14 +342,19 @@ function initTimeline() {
 
 function initSelection() {
     const container = document.getElementById('selection-grid');
+    if (!container) return;
+    container.innerHTML = '';
     athleteData.selections.forEach(sel => {
         const card = document.createElement('div');
         card.className = 'sel-card';
+        const flagTopHtml = sel.flag ? `<div class="sel-flag"><img src="${sel.flag}" alt="${sel.location}" class="sel-flag-img"></div>` : '';
+        const flagLocHtml = sel.flag ? `<img src="${sel.flag}" alt="${sel.location}" class="sel-loc-flag">` : '';
         card.innerHTML = `
+            ${flagTopHtml}
             <div class="sel-year">${sel.year}</div>
             <h4 class="sel-event">${sel.event}</h4>
             <div class="sel-result">${sel.result}</div>
-            <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 10px;">${sel.location}</div>
+            <div class="sel-location">${flagLocHtml}<span>${sel.location}</span></div>
         `;
         container.appendChild(card);
     });
