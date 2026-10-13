@@ -150,6 +150,107 @@ ul { list-style: none; }
 .tar-st-info { font-size: 1.1rem; line-height: 1.4; }
 .tar-st-info span { font-size: 0.95rem; display: block; margin-top: 5px; }
 
+/* Transalpine stage custom video thumbnail link */
+.tar-video-link {
+    position: relative;
+    width: 100px;
+    height: 178px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    display: block;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #111;
+}
+.tar-video-link:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+.tar-video-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.tar-video-link:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.04);
+}
+.tar-video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    pointer-events: none;
+}
+.tar-video-link:hover .tar-video-play-btn {
+    transform: translate(-50%, -50%) scale(1.15);
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: #ffffff;
+}
+.tar-video-play-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: #ffffff;
+    margin-left: 2px;
+}
+.tar-video-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+.tar-video-badge svg {
+    width: 11px;
+    height: 11px;
+    fill: #ffffff;
+}
+.tar-video-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 4px 5px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    letter-spacing: 0.2px;
+}
+
 .tar-quote { font-size: 2.2rem; font-family: var(--font-heading); text-align: center; font-style: italic; max-width: 900px; margin: 0 auto 50px; color: var(--color-gold); line-height: 1.3; }
 .tar-actions { text-align: center; margin-bottom: 50px; }
 .tar-btn { background: #fff; color: var(--color-accent-green); font-weight: bold; padding: 15px 40px; font-size: 1.1rem; border-color: #fff; }
