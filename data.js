@@ -75,7 +75,7 @@ export const athleteData = {
         { year: 2019, event: "Mundial de Trail Running", location: "Argentina", flag: "", result: "29° del mundo, 3° sudamericano, 1° chileno" },
         { year: 2020, event: "Sudamericano de Trail Running", location: "Chile", flag: "", result: "Seleccionado (Sin resultado oficial provisto)" },
         { year: 2023, event: "Mundial de Trail Running", location: "Austria", flag: "", result: "Seleccionado (Sin resultado oficial provisto)" },
-        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "", result: "Clasificado" }
+        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "", result: "7° General (43K)" }
     ],
     results: [
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
@@ -214,11 +214,15 @@ export const athleteData = {
         { year: 2025, race: "Bariloche by UTMB", distance: "22K", position: "2° General", country: "Argentina", highlight: false },
         { year: 2025, race: "El Cruce Saucony", distance: "100K", position: "6° General", country: "Argentina", highlight: false },
 
-        { year: 2026, race: "Kutralkura Trail (Selectiva)", distance: "35K", position: "2° General", country: "Chile", highlight: true },
-        { year: 2026, race: "Puesco Trail (Selectiva)", distance: "30K", position: "2° General", country: "Chile", highlight: true },
-        { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA)", distance: "106km", position: "1° General", country: "Chile", highlight: true },
-        { year: 2026, race: "Dynafit Transalpine Run (7 Etapas)", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
-        { year: 2026, race: "Cascada Trail by Jetour", distance: "30K", position: "1° General", country: "Chile", highlight: true }
+        { year: 2026, race: "Kutralkura Trail (Selectiva) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de enero</span>", distance: "35K", position: "2° General", country: "Chile", highlight: true },
+        { year: 2026, race: "Sollipulli Challenge <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">7 de febrero</span>", distance: "30K", position: "1° General", country: "Chile", highlight: false },
+        { year: 2026, race: "Puesco Trail (Selectiva) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de febrero</span>", distance: "30K", position: "2° General", country: "Chile", highlight: true },
+        { year: 2026, race: "Maratón de Temuco <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">15 de marzo</span>", distance: "42K", position: "3° General (2:29:30)", country: "Chile", highlight: true },
+        { year: 2026, race: "Sudamericano Samaipata <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">18 de abril</span>", distance: "43K (+1600m)", position: "7° General", country: "Bolivia", highlight: true },
+        { year: 2026, race: "Desafío Trail Running ParqueMet <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de mayo</span>", distance: "22K (+1270m)", position: "1° General", country: "Chile", highlight: false },
+        { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">26 de junio</span>", distance: "106km", position: "1° General", country: "Chile", highlight: true },
+        { year: 2026, race: "Dynafit Transalpine Run (7 Etapas) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de agosto al 3 de septiembre</span>", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
+        { year: 2026, race: "Cascada Trail by Jetour <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">3 de octubre</span>", distance: "30K", position: "1° General", country: "Chile", highlight: true }
     ],
     torrencialGallery: [
         "PSX_20260630_185747.jpg", "PSX_20260630_185853.jpg", "PSX_20260630_190041.jpg", "PSX_20260630_190301.jpg", 
