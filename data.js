@@ -9,6 +9,7 @@ export const athleteData = {
         recognitions: [
             "Hijo Ilustre de la Comuna de Til Til",
             "8 veces seleccionado nacional de trail running",
+            "Campeón Nacional Classic Trail 2026 (15K)",
             "Antorcha Parapanamericana 2023 (portador)"
         ]
     },
@@ -65,7 +66,8 @@ export const athleteData = {
         { title: "Cobertura Runchile — Quito Trail by UTMB", link: "https://runchile.cl/luis-valle-3en-los-50k-del-quito-trail-by-utmb-todos-los-chilenos/" },
         { title: "Cobertura Runchile — Torrencial Valdivia 2024", link: "https://runchile.cl/torrencial-valdivia-2024-fue-una-fiesta-del-trail-running/" },
         { title: "Cobertura Runchile — Putaendo", link: "https://runchile.cl/el-trail-running-lleno-putaendo-de-la-mano-de-latitud-sur-expedition-y-merrell/" },
-        { title: "TVN — Cascada Trail by Jetour 2026", link: "https://www.tvn.cl/deportes/polideportivo/cascada-trail-by-jetour-2026-reunio-a-mas-de-750-corredores-en-el-cajon" }
+        { title: "TVN — Cascada Trail by Jetour 2026", link: "https://www.tvn.cl/deportes/polideportivo/cascada-trail-by-jetour-2026-reunio-a-mas-de-750-corredores-en-el-cajon" },
+        { title: "CMPC — Frontera Trail 2026: Campeonato Nacional Classic Trail", link: "https://www.cmpc.com/cmpc-frontera-trail-2026-jorge-vera-y-maria-jose-saavedra-son-campeones-de-los-40k-en-una-fiesta-deportiva-y-familiar/" }
     ],
     selections: [
         { year: 2017, event: "Sudamericano de Trail", location: "Argentina", flag: "/banderas/bandera argentina.webp", result: "5° General, 1° por equipos (42K)" },
@@ -223,7 +225,8 @@ export const athleteData = {
         { year: 2026, race: "Desafío Trail Running ParqueMet <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de mayo</span>", distance: "22K (+1270m)", position: "1° General", country: "Chile", highlight: false },
         { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">26 de junio</span>", distance: "106km", position: "1° General", country: "Chile", highlight: true },
         { year: 2026, race: "Dynafit Transalpine Run (7 Etapas) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de agosto al 3 de septiembre</span>", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
-        { year: 2026, race: "Cascada Trail by Jetour <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">3 de octubre</span>", distance: "30K", position: "1° General", country: "Chile", highlight: true }
+        { year: 2026, race: "Cascada Trail by Jetour <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">3 de octubre</span>", distance: "30K", position: "1° General", country: "Chile", highlight: true },
+        { year: 2026, race: "CMPC Frontera Trail — Campeonato Nacional Classic <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">25 de octubre</span>", distance: "15K", position: "1° General (Campeón Nacional • 01:12:08)", country: "Chile", highlight: true }
     ],
     torrencialGallery: [
         "PSX_20260630_185747.jpg", "PSX_20260630_185853.jpg", "PSX_20260630_190041.jpg", "PSX_20260630_190301.jpg", 
@@ -275,5 +278,23 @@ export const athleteData = {
         "33DF34F2-5F32-4426-88EE-B0BF7D2E76E6.png",
         "PSX_20261006_165916.jpg",
         "Screenshot_20261006_165648_Drive.jpg"
+    ],
+    fronteraGallery: [
+        "PSX_20261027_082745.jpg",
+        "PSX_20261027_082529.jpg",
+        "RAW1A6926.jpg",
+        "PSX_20261026_153007.jpg",
+        "PSX_20261026_153222.jpg",
+        "PSX_20261026_153356.jpg",
+        "PSX_20261026_153520.jpg",
+        "PSX_20261026_153632.jpg",
+        "PSX_20261026_153653.jpg",
+        "PSX_20261027_082559.jpg",
+        "PSX_20261027_082701.jpg",
+        "PSX_20261027_082826.jpg",
+        "PSX_20261027_083001.jpg",
+        "PSX_20261027_083052.jpg",
+        "PSX_20261027_083120.jpg",
+        "PSX_20261027_083322.jpg"
     ]
 };

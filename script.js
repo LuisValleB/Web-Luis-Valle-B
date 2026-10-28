@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTorrencialGallery();
     initK42Gallery();
     initCascadaGallery();
+    initFronteraGallery();
 });
 
 let currentImageIndex = 0;
@@ -110,6 +111,22 @@ function initCascadaGallery() {
     });
     
     if (athleteData.cascadaGallery.length > 6) addLoadMoreButton(container);
+}
+
+function initFronteraGallery() {
+    const container = document.getElementById('frontera-gallery-container');
+    if (!container || !athleteData.fronteraGallery) return;
+
+    athleteData.fronteraGallery.forEach((imgSrc, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
+        wrap.innerHTML = `<img src="/Frontera Trail 2026/${imgSrc}" alt="Frontera Trail 2026 Foto ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.fronteraGallery, '/Frontera Trail 2026/'));
+        container.appendChild(wrap);
+    });
+    
+    if (athleteData.fronteraGallery.length > 6) addLoadMoreButton(container);
 }
 
 function addLoadMoreButton(container) {
