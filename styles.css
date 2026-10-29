@@ -297,58 +297,18 @@ ul { list-style: none; }
 .cascada-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
 
 /* ================== FRONTERA TRAIL EPIC HIGHLIGHT ================== */
-.frontera-epic {
-    background: linear-gradient(145deg, #12281a 0%, #1c3b28 50%, #0d1e13 100%);
-    color: #e8f5e9;
-}
-.frontera-epic .torrencial-epic-header h2 {
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-.frontera-epic .torrencial-epic-header h3 {
-    color: #4ade80;
-}
-.frontera-epic .tar-epic-subtitle {
-    color: #a7f3d0;
-}
-.frontera-epic .tor-badge {
-    background: #22c55e;
-    color: #052e16;
-    font-weight: 800;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
-}
-.frontera-epic .torrencial-text strong {
-    color: #86efac;
-}
-.frontera-epic .torrencial-stats-box, 
-.frontera-epic .torrencial-podium {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(74, 222, 128, 0.2);
-    border-left: 4px solid #4ade80;
-    color: #f0fdf4;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-.frontera-epic .torrencial-stats-box h4, 
-.frontera-epic .torrencial-podium h4 {
-    color: #4ade80;
-}
-.frontera-epic .podium-table td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: #f0fdf4;
-}
-.frontera-epic .podium-table tr:first-child td {
-    color: #4ade80;
-    font-weight: bold;
-}
-.frontera-epic .tor-btn {
-    border-color: #4ade80;
-    color: #4ade80;
-}
-.frontera-epic .tor-btn:hover {
-    background: #4ade80;
-    color: #052e16;
-    border-color: #4ade80;
-}
+.frontera-epic { background: #eef1ec; color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h2 { color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
+.frontera-epic .tar-epic-subtitle { color: var(--color-text-muted); }
+.frontera-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
+.frontera-epic .torrencial-text strong { color: var(--color-text-main); }
+.frontera-epic .torrencial-stats-box, .frontera-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
+.frontera-epic .torrencial-stats-box h4, .frontera-epic .torrencial-podium h4 { color: var(--color-accent-green); }
+.frontera-epic .podium-table td { border-bottom-color: rgba(0,0,0,0.05); color: var(--color-text-main); }
+.frontera-epic .podium-table tr:first-child td { color: var(--color-accent-green); font-weight: bold; }
+.frontera-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
+.frontera-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
 
 .tar-full-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
 .tar-thumb-wrapper { position: relative; padding-bottom: 75%; overflow: hidden; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: var(--transition); }
