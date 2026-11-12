@@ -190,7 +190,7 @@ export const athleteData = {
         { year: 2022, race: "Putaendo Trail", distance: "30K", position: "2° General", country: "Chile", highlight: false },
         { year: 2022, race: "Desafío el Caqui", distance: "14K", position: "2° General", country: "Chile", highlight: false },
         { year: 2022, race: "Andes Mountain Marathon", distance: "21K", position: "1° General", country: "Chile", highlight: false },
-        { year: 2022, race: "K42 Series", distance: "42K", position: "1° General", country: "Argentina", highlight: true },
+        { year: 2022, race: "K42 Series", distance: "42K", position: "1° General (03:41:16)", country: "Argentina", highlight: true },
         { year: 2022, race: "Vulcano Ultra Trail", distance: "100K", position: "1° General", country: "Chile", highlight: true },
 
         { year: 2023, race: "Sprint Vertical Catemu", distance: "-", position: "2° General", country: "Chile", highlight: false },
