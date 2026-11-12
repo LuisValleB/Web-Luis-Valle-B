@@ -9,6 +9,12 @@ window.toggleEpic = function(id) {
     const target = document.getElementById(id);
     if (target) {
         target.classList.add('active');
+        // Load any deferred iframes now that the section has non-zero dimensions
+        target.querySelectorAll('iframe[data-src]').forEach(iframe => {
+            if (!iframe.getAttribute('src')) {
+                iframe.setAttribute('src', iframe.getAttribute('data-src'));
+            }
+        });
         // Scroll to it
         const headerOffset = 60;
         const offsetPosition = target.getBoundingClientRect().top + window.scrollY - headerOffset;
