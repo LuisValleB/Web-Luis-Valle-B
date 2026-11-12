@@ -159,7 +159,8 @@ function addLoadMoreButton(container) {
     btnContainer.style.marginTop = '10px';
 
     const btn = document.createElement('button');
-    btn.className = 'btn btn-secondary';
+    btn.className = 'btn btn-primary';
+    btn.style.marginTop = '10px';
     btn.textContent = 'Ver más fotos';
     btn.onclick = () => {
         const hiddenThumbs = container.querySelectorAll('.tar-thumb-wrapper[style*="display: none"]');

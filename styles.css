@@ -418,8 +418,16 @@ ul { list-style: none; }
 .k42-2026-epic .streak-card { background: rgba(0,0,0,0.04); color: var(--color-text-main); }
 .k42-2026-epic .streak-card span { color: var(--color-text-muted); }
 .k42-2026-epic .streak-card strong { color: var(--color-accent-green); }
-.frontera-epic .tor-btn, .k42-2026-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
-.frontera-epic .tor-btn:hover, .k42-2026-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
+.frontera-epic .tor-btn, .k42-2026-epic .tor-btn,
+.cascada-epic .btn-secondary, .frontera-epic .btn-secondary, .k42-2026-epic .btn-secondary {
+    border-color: var(--color-accent-green);
+    color: var(--color-accent-green);
+}
+.frontera-epic .tor-btn:hover, .k42-2026-epic .tor-btn:hover,
+.cascada-epic .btn-secondary:hover, .frontera-epic .btn-secondary:hover, .k42-2026-epic .btn-secondary:hover {
+    background: var(--color-accent-green);
+    color: #fff;
+}
 
 .tar-full-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
 .tar-thumb-wrapper { position: relative; padding-bottom: 75%; overflow: hidden; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: var(--transition); }
