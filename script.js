@@ -289,7 +289,8 @@ function getFlagHtml(country) {
         'Ecuador': '<img src="https://flagcdn.com/w20/ec.png" alt="Ecuador" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Francia': '<img src="https://flagcdn.com/w20/fr.png" alt="Francia" style="height:12px; margin-right:4px; vertical-align:middle;">',
         'Bolivia': '<img src="/banderas/bandera bolivia.svg" alt="Bolivia" style="height:12px; margin-right:4px; vertical-align:middle;">',
-        'Austria': '<img src="/banderas/bandera austria.svg" alt="Austria" style="height:12px; margin-right:4px; vertical-align:middle;">'
+        'Austria': '<img src="/banderas/bandera austria.svg" alt="Austria" style="height:12px; margin-right:4px; vertical-align:middle;">',
+        'Sudáfrica': '<img src="/banderas/bandera sudafrica.svg" alt="Sudáfrica" style="height:12px; margin-right:4px; vertical-align:middle;">'
     };
     return map[country] || '';
 }

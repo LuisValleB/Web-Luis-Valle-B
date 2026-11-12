@@ -8,7 +8,8 @@ export const athleteData = {
         phrase: "Desde los cerros de Montenegro a las montañas del mundo.",
         recognitions: [
             "Hijo Ilustre de la Comuna de Til Til",
-            "8 veces seleccionado nacional de trail running",
+            "9 veces seleccionado nacional de trail running",
+            "Clasificado al Mundial de Sudáfrica 2027",
             "Campeón Nacional Classic Trail 2026 (15K)",
             "Antorcha Parapanamericana 2023 (portador)"
         ]
@@ -86,7 +87,8 @@ export const athleteData = {
         { year: 2019, event: "Mundial de Trail Running", location: "Argentina", flag: "/banderas/bandera argentina.webp", result: "29° del mundo, 3° sudamericano, 1° chileno" },
         { year: 2020, event: "Sudamericano de Trail Running", location: "Chile", flag: "/banderas/bandera chile.webp", result: "Cancelado por pandemia" },
         { year: 2023, event: "Mundial de Trail Running", location: "Austria", flag: "/banderas/bandera austria.svg", result: "Lugar 62 (45K)" },
-        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "/banderas/bandera bolivia.svg", result: "7° General (43K)" }
+        { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "/banderas/bandera bolivia.svg", result: "7° General (43K)" },
+        { year: 2027, event: "Mundial de Montaña y Trail Running", location: "Sudáfrica", flag: "/banderas/bandera sudafrica.svg", result: "Clasificado (Campeón Nacional Classic 15K)" }
     ],
     results: [
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
