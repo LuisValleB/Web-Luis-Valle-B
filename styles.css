@@ -407,7 +407,8 @@ ul { list-style: none; }
 .frontera-epic .torrencial-epic-header h3, .k42-2026-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
 .frontera-epic .tar-epic-subtitle, .k42-2026-epic .tar-epic-subtitle { color: var(--color-text-muted); }
 .frontera-epic .tor-badge, .k42-2026-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
-.frontera-epic .torrencial-text strong, .k42-2026-epic .torrencial-text strong { color: var(--color-text-main); }
+.frontera-epic .torrencial-text strong { color: #9e3a26; }
+.k42-2026-epic .torrencial-text strong { color: var(--color-accent-orange); }
 .frontera-epic .torrencial-stats-box, .frontera-epic .torrencial-podium,
 .k42-2026-epic .torrencial-stats-box, .k42-2026-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
 .frontera-epic .torrencial-stats-box h4, .frontera-epic .torrencial-podium h4,
@@ -806,6 +807,38 @@ footer { background: var(--color-accent-green); color: #fff; padding: 30px 20px;
 .latest-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.latest-card-national {
+    border-top: 4px solid #9e3a26;
+    background: #fdfbf7;
+}
+.national-champ-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(158, 58, 38, 0.1);
+    color: #9e3a26;
+    border: 1px solid rgba(158, 58, 38, 0.25);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+.national-champ-title {
+    color: var(--color-text-main) !important;
+    line-height: 1.25;
+}
+.national-champ-sub {
+    display: block;
+    color: #9e3a26;
+    font-size: 0.98rem;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
 }
 .latest-img {
     width: 100%;
