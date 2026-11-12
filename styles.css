@@ -296,19 +296,25 @@ ul { list-style: none; }
 .cascada-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
 .cascada-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
 
-/* ================== FRONTERA TRAIL EPIC HIGHLIGHT ================== */
-.frontera-epic { background: #eef1ec; color: var(--color-text-main); }
-.frontera-epic .torrencial-epic-header h2 { color: var(--color-text-main); }
-.frontera-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
-.frontera-epic .tar-epic-subtitle { color: var(--color-text-muted); }
-.frontera-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
-.frontera-epic .torrencial-text strong { color: var(--color-text-main); }
-.frontera-epic .torrencial-stats-box, .frontera-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
-.frontera-epic .torrencial-stats-box h4, .frontera-epic .torrencial-podium h4 { color: var(--color-accent-green); }
-.frontera-epic .podium-table td { border-bottom-color: rgba(0,0,0,0.05); color: var(--color-text-main); }
-.frontera-epic .podium-table tr:first-child td { color: var(--color-accent-green); font-weight: bold; }
-.frontera-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
-.frontera-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
+/* ================== FRONTERA TRAIL & K42 2026 EPIC HIGHLIGHTS ================== */
+.frontera-epic, .k42-2026-epic { background: #eef1ec; color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h2, .k42-2026-epic .torrencial-epic-header h2 { color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h3, .k42-2026-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
+.frontera-epic .tar-epic-subtitle, .k42-2026-epic .tar-epic-subtitle { color: var(--color-text-muted); }
+.frontera-epic .tor-badge, .k42-2026-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
+.frontera-epic .torrencial-text strong, .k42-2026-epic .torrencial-text strong { color: var(--color-text-main); }
+.frontera-epic .torrencial-stats-box, .frontera-epic .torrencial-podium,
+.k42-2026-epic .torrencial-stats-box, .k42-2026-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
+.frontera-epic .torrencial-stats-box h4, .frontera-epic .torrencial-podium h4,
+.k42-2026-epic .torrencial-stats-box h4, .k42-2026-epic .torrencial-podium h4 { color: var(--color-accent-green); }
+.frontera-epic .podium-table td, .k42-2026-epic .podium-table td { border-bottom-color: rgba(0,0,0,0.05); color: var(--color-text-main); }
+.frontera-epic .podium-table tr:first-child td, .k42-2026-epic .podium-table tr:first-child td { color: var(--color-accent-green); font-weight: bold; }
+.k42-2026-epic .torrencial-streak h3 { color: var(--color-text-main); }
+.k42-2026-epic .streak-card { background: rgba(0,0,0,0.04); color: var(--color-text-main); }
+.k42-2026-epic .streak-card span { color: var(--color-text-muted); }
+.k42-2026-epic .streak-card strong { color: var(--color-accent-green); }
+.frontera-epic .tor-btn, .k42-2026-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
+.frontera-epic .tor-btn:hover, .k42-2026-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
 
 .tar-full-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
 .tar-thumb-wrapper { position: relative; padding-bottom: 75%; overflow: hidden; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: var(--transition); }

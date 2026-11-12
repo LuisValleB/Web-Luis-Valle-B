@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initK42Gallery();
     initCascadaGallery();
     initFronteraGallery();
+    initK42_2026Gallery();
 });
 
 let currentImageIndex = 0;
@@ -127,6 +128,22 @@ function initFronteraGallery() {
     });
     
     if (athleteData.fronteraGallery.length > 6) addLoadMoreButton(container);
+}
+
+function initK42_2026Gallery() {
+    const container = document.getElementById('k42-2026-gallery-container');
+    if (!container || !athleteData.k42_2026Gallery) return;
+
+    athleteData.k42_2026Gallery.forEach((imgSrc, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
+        wrap.innerHTML = `<img src="/K42 2026/${imgSrc}" alt="ASICS K42 Villa La Angostura 2026 Foto ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.k42_2026Gallery, '/K42 2026/'));
+        container.appendChild(wrap);
+    });
+    
+    if (athleteData.k42_2026Gallery.length > 6) addLoadMoreButton(container);
 }
 
 function addLoadMoreButton(container) {
