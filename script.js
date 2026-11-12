@@ -313,77 +313,117 @@ function getFlagHtml(country) {
     return map[country] || '';
 }
 
-function renderTimeline(filterType = 'all', showAll = false) {
+function renderTimeline(filterType = 'all', expandAll = false) {
     const container = document.getElementById('timeline-container');
     container.innerHTML = '';
     
     currentFilter = filterType;
-    let lastYear = null;
-    let renderedCount = 0;
     
     // Reverse chronological order
     const sortedResults = [...athleteData.results].reverse();
     
+    // Group filtered results by year preserving reverse chronological order
+    const yearGroups = new Map();
     sortedResults.forEach(r => {
-        // Apply filters
         if (filterType === 'highlights' && !r.highlight) return;
         if (filterType === 'podiums') {
             const pos = r.position.toLowerCase();
             if (!pos.includes('1°') && !pos.includes('2°') && !pos.includes('3°')) return;
         }
-
-        renderedCount++;
-        const isHidden = !showAll && renderedCount > timelineLimit;
-
-        // Group by year
-        if (r.year !== lastYear) {
-            const divider = document.createElement('div');
-            divider.className = 'timeline-year-divider';
-            if (isHidden) divider.classList.add('tl-hidden');
-            divider.innerHTML = `<span>${r.year}</span>`;
-            container.appendChild(divider);
-            lastYear = r.year;
+        if (!yearGroups.has(r.year)) {
+            yearGroups.set(r.year, []);
         }
+        yearGroups.get(r.year).push(r);
+    });
 
-        const item = document.createElement('div');
-        item.className = 'timeline-item';
-        if (isHidden) item.classList.add('tl-hidden');
-        
-        let posClass = '';
-        if (r.position.includes('1°')) posClass = 'tl-pos-1';
-        else if (r.position.includes('2°')) posClass = 'tl-pos-2';
-        else if (r.position.includes('3°')) posClass = 'tl-pos-3';
+    const years = Array.from(yearGroups.keys());
 
-        const flagHtml = getFlagHtml(r.country);
+    years.forEach((year, yearIdx) => {
+        const races = yearGroups.get(year);
+        const isExpanded = expandAll || yearIdx === 0;
 
-        item.innerHTML = `
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-                <span class="tl-year">${r.year}</span>
-                <h3 class="tl-race">${r.race}</h3>
-                <div class="tl-meta">
-                    <span>${r.distance}</span>
-                    <span>${flagHtml}${r.country}</span>
-                    <span class="tl-position ${posClass}">${r.position}</span>
-                </div>
-            </div>
+        const divider = document.createElement('div');
+        divider.className = 'timeline-year-divider';
+        const raceLabel = races.length === 1 ? '1 carrera' : `${races.length} carreras`;
+        divider.innerHTML = `
+            <button type="button" class="timeline-year-btn ${isExpanded ? 'expanded' : ''}" aria-expanded="${isExpanded}">
+                <span class="tl-year-title">${year}</span>
+                <span class="tl-year-badge">${raceLabel}</span>
+                <span class="tl-year-chevron" aria-hidden="true">▾</span>
+            </button>
         `;
-        container.appendChild(item);
+        container.appendChild(divider);
+
+        const groupEl = document.createElement('div');
+        groupEl.className = `timeline-year-group ${isExpanded ? 'open' : 'collapsed'}`;
+        groupEl.setAttribute('data-year', year);
+
+        races.forEach(r => {
+            const item = document.createElement('div');
+            item.className = 'timeline-item';
+            
+            let posClass = '';
+            if (r.position.includes('1°')) posClass = 'tl-pos-1';
+            else if (r.position.includes('2°')) posClass = 'tl-pos-2';
+            else if (r.position.includes('3°')) posClass = 'tl-pos-3';
+
+            const flagHtml = getFlagHtml(r.country);
+
+            item.innerHTML = `
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <span class="tl-year">${r.year}</span>
+                    <h3 class="tl-race">${r.race}</h3>
+                    <div class="tl-meta">
+                        <span>${r.distance}</span>
+                        <span>${flagHtml}${r.country}</span>
+                        <span class="tl-position ${posClass}">${r.position}</span>
+                    </div>
+                </div>
+            `;
+            groupEl.appendChild(item);
+        });
+
+        const btn = divider.querySelector('.timeline-year-btn');
+        btn.addEventListener('click', () => {
+            const currentlyOpen = groupEl.classList.contains('open');
+            if (currentlyOpen) {
+                groupEl.classList.remove('open');
+                groupEl.classList.add('collapsed');
+                btn.classList.remove('expanded');
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                groupEl.classList.remove('collapsed');
+                groupEl.classList.add('open');
+                btn.classList.add('expanded');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+            updateLoadMoreBtnState(container);
+        });
+
+        container.appendChild(groupEl);
     });
 
     const loadMoreBtn = document.getElementById('load-more-btn');
     if (loadMoreBtn) {
-        if (renderedCount > timelineLimit && !showAll) {
+        if (years.length > 1) {
             loadMoreBtn.style.display = 'inline-block';
+            updateLoadMoreBtnState(container);
             loadMoreBtn.onclick = () => {
-                const hiddenItems = container.querySelectorAll('.tl-hidden');
-                hiddenItems.forEach(el => el.classList.remove('tl-hidden'));
-                loadMoreBtn.style.display = 'none';
+                const anyCollapsed = container.querySelector('.timeline-year-group.collapsed') !== null;
+                renderTimeline(currentFilter, anyCollapsed);
             };
         } else {
             loadMoreBtn.style.display = 'none';
         }
     }
+}
+
+function updateLoadMoreBtnState(container) {
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (!loadMoreBtn) return;
+    const anyCollapsed = container.querySelector('.timeline-year-group.collapsed') !== null;
+    loadMoreBtn.textContent = anyCollapsed ? 'Desplegar todos los años' : 'Mostrar solo último año';
 }
 
 function initTimeline() {

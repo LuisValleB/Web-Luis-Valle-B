@@ -474,10 +474,58 @@ section { padding: var(--section-padding); }
     width: 16px; height: 16px; border-radius: 50%; background: var(--color-bg-secondary); border: 3px solid var(--color-accent-orange); z-index: 1;
 }
 .timeline-year-divider {
-    text-align: center; margin: 40px 0 20px; position: relative; z-index: 2; width: 100%;
+    text-align: center; margin: 22px 0 18px; position: relative; z-index: 2; width: 100%;
 }
-.timeline-year-divider span {
-    background: var(--color-accent-green); color: #fff; padding: 5px 20px; border-radius: 20px; font-family: var(--font-heading); font-size: 1.2rem; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.timeline-year-btn {
+    background: var(--color-accent-green);
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 28px;
+    border: 2px solid transparent;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+.timeline-year-btn:hover {
+    background: var(--color-accent-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+}
+.timeline-year-btn.expanded {
+    background: var(--color-accent-orange);
+}
+.tl-year-title {
+    letter-spacing: 0.5px;
+}
+.tl-year-badge {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 9px;
+    border-radius: 12px;
+    letter-spacing: 0.2px;
+}
+.tl-year-chevron {
+    font-size: 0.95rem;
+    transition: transform 0.25s ease;
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+.timeline-year-btn.expanded .tl-year-chevron {
+    transform: rotate(0deg);
+}
+.timeline-year-group.collapsed {
+    display: none;
+}
+.timeline-year-group.open {
+    display: block;
+    animation: fadeIn 0.3s ease;
 }
 .timeline-content {
     background: var(--color-bg-main); padding: 20px; border-radius: 8px; width: 90%;
