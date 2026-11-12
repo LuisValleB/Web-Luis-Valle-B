@@ -401,31 +401,33 @@ ul { list-style: none; }
 .cascada-epic .tor-btn { border-color: var(--color-accent-green); color: var(--color-accent-green); }
 .cascada-epic .tor-btn:hover { background: var(--color-accent-green); color: #fff; }
 
-/* ================== FRONTERA TRAIL & K42 2026 EPIC HIGHLIGHTS ================== */
-.frontera-epic, .k42-2026-epic { background: #eef1ec; color: var(--color-text-main); }
-.frontera-epic .torrencial-epic-header h2, .k42-2026-epic .torrencial-epic-header h2 { color: var(--color-text-main); }
-.frontera-epic .torrencial-epic-header h3, .k42-2026-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
-.frontera-epic .tar-epic-subtitle, .k42-2026-epic .tar-epic-subtitle { color: var(--color-text-muted); }
-.frontera-epic .tor-badge, .k42-2026-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
+/* ================== FRONTERA TRAIL, K42 2026 & PARQUEMET 2026 EPIC HIGHLIGHTS ================== */
+.frontera-epic, .k42-2026-epic, .parquemet-epic { background: #eef1ec; color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h2, .k42-2026-epic .torrencial-epic-header h2, .parquemet-epic .torrencial-epic-header h2 { color: var(--color-text-main); }
+.frontera-epic .torrencial-epic-header h3, .k42-2026-epic .torrencial-epic-header h3, .parquemet-epic .torrencial-epic-header h3 { color: var(--color-accent-green); }
+.frontera-epic .tar-epic-subtitle, .k42-2026-epic .tar-epic-subtitle, .parquemet-epic .tar-epic-subtitle { color: var(--color-text-muted); }
+.frontera-epic .tor-badge, .k42-2026-epic .tor-badge, .parquemet-epic .tor-badge { background: var(--color-accent-green); color: #fff; }
 .frontera-epic .torrencial-text strong { color: #9e3a26; }
-.k42-2026-epic .torrencial-text strong { color: var(--color-accent-orange); }
+.k42-2026-epic .torrencial-text strong, .parquemet-epic .torrencial-text strong { color: var(--color-accent-orange); }
 .frontera-epic .torrencial-stats-box, .frontera-epic .torrencial-podium,
-.k42-2026-epic .torrencial-stats-box, .k42-2026-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
+.k42-2026-epic .torrencial-stats-box, .k42-2026-epic .torrencial-podium,
+.parquemet-epic .torrencial-stats-box, .parquemet-epic .torrencial-podium { background: rgba(0,0,0,0.04); border-left-color: var(--color-accent-green); color: var(--color-text-main); }
 .frontera-epic .torrencial-stats-box h4, .frontera-epic .torrencial-podium h4,
-.k42-2026-epic .torrencial-stats-box h4, .k42-2026-epic .torrencial-podium h4 { color: var(--color-accent-green); }
-.frontera-epic .podium-table td, .k42-2026-epic .podium-table td { border-bottom-color: rgba(0,0,0,0.05); color: var(--color-text-main); }
-.frontera-epic .podium-table tr:first-child td, .k42-2026-epic .podium-table tr:first-child td { color: var(--color-accent-green); font-weight: bold; }
+.k42-2026-epic .torrencial-stats-box h4, .k42-2026-epic .torrencial-podium h4,
+.parquemet-epic .torrencial-stats-box h4, .parquemet-epic .torrencial-podium h4 { color: var(--color-accent-green); }
+.frontera-epic .podium-table td, .k42-2026-epic .podium-table td, .parquemet-epic .podium-table td { border-bottom-color: rgba(0,0,0,0.05); color: var(--color-text-main); }
+.frontera-epic .podium-table tr:first-child td, .k42-2026-epic .podium-table tr:first-child td, .parquemet-epic .podium-table tr:first-child td { color: var(--color-accent-green); font-weight: bold; }
 .k42-2026-epic .torrencial-streak h3 { color: var(--color-text-main); }
 .k42-2026-epic .streak-card { background: rgba(0,0,0,0.04); color: var(--color-text-main); }
 .k42-2026-epic .streak-card span { color: var(--color-text-muted); }
 .k42-2026-epic .streak-card strong { color: var(--color-accent-green); }
-.frontera-epic .tor-btn, .k42-2026-epic .tor-btn,
-.cascada-epic .btn-secondary, .frontera-epic .btn-secondary, .k42-2026-epic .btn-secondary {
+.frontera-epic .tor-btn, .k42-2026-epic .tor-btn, .parquemet-epic .tor-btn,
+.cascada-epic .btn-secondary, .frontera-epic .btn-secondary, .k42-2026-epic .btn-secondary, .parquemet-epic .btn-secondary {
     border-color: var(--color-accent-green);
     color: var(--color-accent-green);
 }
-.frontera-epic .tor-btn:hover, .k42-2026-epic .tor-btn:hover,
-.cascada-epic .btn-secondary:hover, .frontera-epic .btn-secondary:hover, .k42-2026-epic .btn-secondary:hover {
+.frontera-epic .tor-btn:hover, .k42-2026-epic .tor-btn:hover, .parquemet-epic .tor-btn:hover,
+.cascada-epic .btn-secondary:hover, .frontera-epic .btn-secondary:hover, .k42-2026-epic .btn-secondary:hover, .parquemet-epic .btn-secondary:hover {
     background: var(--color-accent-green);
     color: #fff;
 }

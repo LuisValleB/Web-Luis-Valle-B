@@ -77,7 +77,8 @@ export const athleteData = {
         { title: "Noticias NQN — Luis Valle Barrientos y Flor Iuorno ganaron el K42 2026 en Villa La Angostura", link: "https://www.noticiasnqn.com.ar/noticias/2026/11/07/359973-luis-valle-barrientos-y-flor-iuorno-ganaron-el-k42-2026-en-villa-la-angostura" },
         { title: "Neuquén Informa — Villa La Angostura cerró con éxito una nueva edición del K42", link: "https://www.neuqueninforma.gob.ar/amp/noticias/2026/11/10/267047-villa-la-angostura-cerro-con-exito-una-nueva-edicion-del-k42" },
         { title: "Realidad Sanmartinense — Gran actuación en el ASICS K42 de Villa La Angostura", link: "https://realidadsm.com/2026/11/08/gran-actuacion-de-los-atletas-locales-en-el-asics-k42-de-villa-la-angostura/" },
-        { title: "Diario Andino — Villa La Angostura ya vive el K42", link: "https://www.diarioandino.com.ar/noticias/2026/11/06/239028-villa-la-angostura-ya-vive-el-k42-comenzo-la-fiesta-del-trail-running-con-corredores-de-todo-el-mundo" }
+        { title: "Diario Andino — Villa La Angostura ya vive el K42", link: "https://www.diarioandino.com.ar/noticias/2026/11/06/239028-villa-la-angostura-ya-vive-el-k42-comenzo-la-fiesta-del-trail-running-con-corredores-de-todo-el-mundo" },
+        { title: "Cobertura Runchile — 1ª Fecha Desafío Trail Running Parquemet 2026", link: "https://runchile.cl/cerca-de-1-100-corredores-dieron-vida-a-la-primera-fecha-del-desafio-trail-running-parquemet-2026/" }
     ],
     selections: [
         { year: 2017, event: "Sudamericano de Trail", location: "Argentina", flag: "/banderas/bandera argentina.webp", result: "5° General, 1° por equipos (42K)" },
@@ -233,7 +234,7 @@ export const athleteData = {
         { year: 2026, race: "Puesco Trail (Selectiva) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de febrero</span>", distance: "30K", position: "2° General", country: "Chile", highlight: true },
         { year: 2026, race: "Maratón de Temuco <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">15 de marzo</span>", distance: "42K", position: "3° General (2:29:30)", country: "Chile", highlight: true },
         { year: 2026, race: "Sudamericano Samaipata <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">18 de abril</span>", distance: "43K (+1600m)", position: "7° General", country: "Bolivia", highlight: true },
-        { year: 2026, race: "Desafío Trail Running ParqueMet <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de mayo</span>", distance: "22K (+1270m)", position: "1° General", country: "Chile", highlight: false },
+        { year: 2026, race: "Desafío Trail Running ParqueMet <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de mayo</span>", distance: "21K (+1270m)", position: "1° General (02:00:35)", country: "Chile", highlight: true },
         { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">26 de junio</span>", distance: "106km", position: "1° General", country: "Chile", highlight: true },
         { year: 2026, race: "Dynafit Transalpine Run (7 Etapas) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de agosto al 3 de septiembre</span>", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
         { year: 2026, race: "Cascada Trail by Jetour <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">3 de octubre</span>", distance: "30K", position: "1° General", country: "Chile", highlight: true },
@@ -358,5 +359,10 @@ export const athleteData = {
         "IMG-20261107-WA0084.jpg",
         "IMG-20261107-WA0085.jpg",
         "IMG-20261107-WA0086.jpg"
+    ],
+    parquemetGallery: [
+        "PSX_20260517_132918.jpg",
+        "PSX_20260517_132945.jpg",
+        "PSX_20260517_133022.jpg"
     ]
 };

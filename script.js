@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCascadaGallery();
     initFronteraGallery();
     initK42_2026Gallery();
+    initParquemetGallery();
 });
 
 let currentImageIndex = 0;
@@ -150,6 +151,22 @@ function initK42_2026Gallery() {
     });
     
     if (athleteData.k42_2026Gallery.length > 6) addLoadMoreButton(container);
+}
+
+function initParquemetGallery() {
+    const container = document.getElementById('parquemet-gallery-container');
+    if (!container || !athleteData.parquemetGallery) return;
+
+    athleteData.parquemetGallery.forEach((imgSrc, index) => {
+        const wrap = document.createElement('div');
+        wrap.className = 'tar-thumb-wrapper';
+        if (index >= 6) wrap.style.display = 'none';
+        wrap.innerHTML = `<img src="/Desafío Trail running Parquemet 2026/${imgSrc}" alt="Desafío Trail Running Parquemet 2026 Foto ${index + 1}" loading="lazy">`;
+        wrap.addEventListener('click', () => openLightbox(index, athleteData.parquemetGallery, '/Desafío Trail running Parquemet 2026/'));
+        container.appendChild(wrap);
+    });
+    
+    if (athleteData.parquemetGallery.length > 6) addLoadMoreButton(container);
 }
 
 function addLoadMoreButton(container) {
