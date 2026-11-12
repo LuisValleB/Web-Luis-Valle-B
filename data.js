@@ -29,7 +29,7 @@ export const athleteData = {
         {
             name: "Leonardo Astorga",
             role: "Entrenador desde 2015. Coach Atletismo Nivel 1 IAAF. Especialista fondo y medio fondo. Coordinador Edex Til Til. Jefe técnico Atlético Caleu. Coach Trail Venezuela.",
-            link: "https://web.facebook.com/leo.astorga1"
+            link: "https://www.instagram.com/leo.astorga.a/"
         },
         {
             name: "PACUL",
