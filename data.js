@@ -121,13 +121,16 @@ export const athleteData = {
         {
             year: 2025,
             race: "OCC – Ultra-Trail du Mont-Blanc",
-            category: "50K+ • UTMB World Series Finals",
+            category: "60.6K (+3.490m) • UTMB World Series Finals",
             location: "Chamonix, Francia",
             flag: "https://flagcdn.com/w40/fr.png",
-            result: "42° General (5h 48m)",
+            result: "42° General (05:48:33)",
             note: "2° mejor tiempo histórico de Chile entre 1.568 corredores",
             badge: "Final Mundial Chamonix",
-            isFinals: true
+            isFinals: true,
+            image: "occ 2025.jpg",
+            imagePos: "center center",
+            galleryIndex: 3
         },
         {
             year: 2025,
@@ -140,7 +143,7 @@ export const athleteData = {
             isPodiumFirst: true,
             image: "torrencial 2025.jpg",
             imagePos: "center 25%",
-            galleryIndex: 3
+            galleryIndex: 5
         },
         {
             year: 2024,
@@ -152,7 +155,7 @@ export const athleteData = {
             badge: "Podio Internacional",
             image: "quito trail 2024.JPG",
             imagePos: "center 20%",
-            galleryIndex: 4,
+            galleryIndex: 6,
             link: "https://runchile.cl/luis-valle-3en-los-50k-del-quito-trail-by-utmb-todos-los-chilenos/"
         },
         {
@@ -165,13 +168,15 @@ export const athleteData = {
             badge: "Podio Internacional",
             image: "valholl 2024 2.JPG",
             imagePos: "center 20%",
-            galleryIndex: 6
+            galleryIndex: 8
         }
     ],
     utmbGallery: [
         "torrencial 2026.jpg",
         "torrencial 2026 2.jpg",
         "bariloche 2025.jpg",
+        "occ 2025.jpg",
+        "occ 2025 2.jpg",
         "torrencial 2025.jpg",
         "quito trail 2024.JPG",
         "quito trail 2024 2.JPG",
