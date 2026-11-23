@@ -187,7 +187,7 @@ export const athleteData = {
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
         { year: 2012, race: "Desafío Senderos", distance: "8K", position: "1° General", country: "Chile", highlight: false },
         { year: 2012, race: "X Trail Puchuncaví", distance: "14K", position: "1° General", country: "Chile", highlight: false },
-        
+
         { year: 2013, race: "Trail Running Putaendo", distance: "33K", position: "3° General", country: "Chile", highlight: false },
         { year: 2013, race: "Peñuelas Trail Run", distance: "21K", position: "3°", country: "Chile", highlight: false },
         { year: 2013, race: "Trail Run Valle Aconcagua", distance: "39K", position: "2° General", country: "Chile", highlight: false },
@@ -334,11 +334,11 @@ export const athleteData = {
         { year: 2026, race: "ASICS K42 Series Villa La Angostura <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">7 de noviembre</span>", distance: "42K", position: "1° General (03:18:47)", country: "Argentina", highlight: true }
     ],
     torrencialGallery: [
-        "PSX_20260630_185747.jpg", "PSX_20260630_185853.jpg", "PSX_20260630_190041.jpg", "PSX_20260630_190301.jpg", 
+        "PSX_20260630_185747.jpg", "PSX_20260630_185853.jpg", "PSX_20260630_190041.jpg", "PSX_20260630_190301.jpg",
         "PSX_20260630_190450.jpg", "PSX_20260630_190614.jpg", "PSX_20260630_190841.jpg", "PSX_20260630_191043.jpg",
         "PSX_20260630_191126.jpg", "PSX_20260630_191234.jpg", "PSX_20260630_191333.jpg", "PSX_20260630_191451.jpg",
         "PSX_20260630_191531.jpg", "PSX_20260630_191647.jpg", "PSX_20260630_191823.jpg", "PSX_20260630_193358.jpg",
-        "PSX_20260630_195236.jpg", "PSX_20260630_195316.jpg", "ReactNative-snapshot-image332327620208439344.png.jpg", 
+        "PSX_20260630_195236.jpg", "PSX_20260630_195316.jpg", "ReactNative-snapshot-image332327620208439344.png.jpg",
         "SaveClip.App_731213489_17955771597173456_3736497041737602941_n.jpg"
     ],
     tarGallery: [
