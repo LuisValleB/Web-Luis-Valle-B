@@ -370,8 +370,10 @@ function renderTimeline(filterType = 'all', expandAll = false) {
             else if (r.position.includes('3°')) posClass = 'tl-pos-3';
 
             const flagHtml = getFlagHtml(r.country);
+            const isOcc = r.race.toUpperCase().includes('OCC');
+            const utmbLogoSrc = isOcc ? '/logos/logo utmb.png' : '/logos/logo utmb world series.png';
             const utmbBadgeHtml = r.utmb
-                ? `<span class="tl-utmb-tag"><img src="/logos/utmb.png" alt="UTMB"> Circuito UTMB®</span>`
+                ? `<span class="tl-utmb-tag"><img src="${utmbLogoSrc}" alt="UTMB"> ${isOcc ? 'UTMB® Mont-Blanc' : 'UTMB® World Series'}</span>`
                 : '';
 
             item.innerHTML = `
@@ -460,8 +462,13 @@ function initUtmbCircuit() {
         card.className = cardClass;
 
         const logoImg = item.isFinals
-            ? `<img src="/logos/occ.png" alt="OCC UTMB" class="utmb-card-brand-logo">`
-            : `<img src="/logos/utmb.png" alt="UTMB" class="utmb-card-brand-logo">`;
+            ? `<div class="utmb-card-logos">
+                   <img src="/logos/logo utmb.png" alt="UTMB Mont-Blanc" class="utmb-card-brand-logo utmb-card-brand-mb">
+                   <img src="/logos/occ.png" alt="OCC UTMB" class="utmb-card-brand-logo utmb-card-brand-occ">
+               </div>`
+            : `<div class="utmb-card-logos">
+                   <img src="/logos/logo utmb world series.png" alt="UTMB World Series" class="utmb-card-brand-logo">
+               </div>`;
 
         const mediaHtml = item.image
             ? `<div class="utmb-card-media" data-gallery-idx="${item.galleryIndex}">

@@ -464,26 +464,32 @@ section { padding: var(--section-padding); }
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    margin-bottom: 14px;
+    gap: 22px;
+    margin-bottom: 16px;
     background: var(--color-bg-secondary);
-    padding: 10px 24px;
-    border-radius: 30px;
+    padding: 12px 28px;
+    border-radius: 36px;
     border: 1px solid rgba(0, 0, 0, 0.06);
+    flex-wrap: wrap;
 }
 .utmb-section-logo {
-    height: 24px;
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+}
+.utmb-montblanc-logo {
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
 .utmb-occ-logo {
-    height: 22px;
+    height: 24px;
     width: auto;
     object-fit: contain;
 }
 .utmb-logo-divider {
     width: 1px;
-    height: 20px;
+    height: 26px;
     background: rgba(0, 0, 0, 0.15);
 }
 .utmb-summary-bar {
@@ -648,11 +654,22 @@ section { padding: var(--section-padding); }
     background: rgba(158, 58, 38, 0.12);
     color: #9e3a26;
 }
+.utmb-card-logos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
 .utmb-card-brand-logo {
-    height: 18px;
+    height: 24px;
     width: auto;
     object-fit: contain;
-    opacity: 0.9;
+}
+.utmb-card-brand-mb {
+    height: 28px;
+}
+.utmb-card-brand-occ {
+    height: 16px;
 }
 .utmb-race-title {
     font-size: 1.35rem;
@@ -822,7 +839,7 @@ section { padding: var(--section-padding); }
     letter-spacing: 0.4px;
 }
 .tl-utmb-tag img {
-    height: 10px;
+    height: 14px;
     width: auto;
     object-fit: contain;
 }
