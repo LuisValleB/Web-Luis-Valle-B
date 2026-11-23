@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
     initHero();
     initStats();
+    initUtmbCircuit();
     initTimeline();
     initSelection();
     initPressAndVideos();
@@ -326,6 +327,7 @@ function renderTimeline(filterType = 'all', expandAll = false) {
     const yearGroups = new Map();
     sortedResults.forEach(r => {
         if (filterType === 'highlights' && !r.highlight) return;
+        if (filterType === 'utmb' && !r.utmb) return;
         if (filterType === 'podiums') {
             const pos = r.position.toLowerCase();
             if (!pos.includes('1°') && !pos.includes('2°') && !pos.includes('3°')) return;
@@ -340,7 +342,7 @@ function renderTimeline(filterType = 'all', expandAll = false) {
 
     years.forEach((year, yearIdx) => {
         const races = yearGroups.get(year);
-        const isExpanded = expandAll || yearIdx === 0;
+        const isExpanded = expandAll || filterType === 'utmb' || yearIdx === 0;
 
         const divider = document.createElement('div');
         divider.className = 'timeline-year-divider';
@@ -360,7 +362,7 @@ function renderTimeline(filterType = 'all', expandAll = false) {
 
         races.forEach(r => {
             const item = document.createElement('div');
-            item.className = 'timeline-item';
+            item.className = `timeline-item ${r.utmb ? 'timeline-item-utmb' : ''}`;
             
             let posClass = '';
             if (r.position.includes('1°')) posClass = 'tl-pos-1';
@@ -368,11 +370,17 @@ function renderTimeline(filterType = 'all', expandAll = false) {
             else if (r.position.includes('3°')) posClass = 'tl-pos-3';
 
             const flagHtml = getFlagHtml(r.country);
+            const utmbBadgeHtml = r.utmb
+                ? `<span class="tl-utmb-tag"><img src="/logos/utmb.png" alt="UTMB"> Circuito UTMB®</span>`
+                : '';
 
             item.innerHTML = `
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <span class="tl-year">${r.year}</span>
+                <div class="timeline-marker ${r.utmb ? 'timeline-marker-utmb' : ''}"></div>
+                <div class="timeline-content ${r.utmb ? 'timeline-content-utmb' : ''}">
+                    <div class="tl-header-row">
+                        <span class="tl-year">${r.year}</span>
+                        ${utmbBadgeHtml}
+                    </div>
                     <h3 class="tl-race">${r.race}</h3>
                     <div class="tl-meta">
                         <span>${r.distance}</span>
@@ -436,6 +444,54 @@ function initTimeline() {
             e.target.classList.add('active');
             renderTimeline(e.target.getAttribute('data-filter'), false);
         });
+    });
+}
+
+function initUtmbCircuit() {
+    const container = document.getElementById('utmb-circuit-grid');
+    if (!container || !athleteData.utmbCircuit) return;
+    container.innerHTML = '';
+
+    athleteData.utmbCircuit.forEach(item => {
+        const card = document.createElement('div');
+        let cardClass = 'utmb-card';
+        if (item.isPodiumFirst) cardClass += ' utmb-card-winner';
+        if (item.isFinals) cardClass += ' utmb-card-finals';
+        card.className = cardClass;
+
+        const logoImg = item.isFinals
+            ? `<img src="/logos/occ.png" alt="OCC UTMB" class="utmb-card-brand-logo">`
+            : `<img src="/logos/utmb.png" alt="UTMB" class="utmb-card-brand-logo">`;
+
+        const noteHtml = item.note ? `<p class="utmb-card-note">${item.note}</p>` : '';
+        let actionHtml = '';
+        if (item.epicId) {
+            actionHtml = `<button type="button" class="utmb-card-action" onclick="toggleEpic('${item.epicId}')">Ver crónica y fotos →</button>`;
+        } else if (item.link) {
+            actionHtml = `<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="utmb-card-action">Prensa: Runchile →</a>`;
+        }
+
+        card.innerHTML = `
+            <div class="utmb-card-top">
+                <div class="utmb-card-badges">
+                    <span class="utmb-year-tag">${item.year}</span>
+                    <span class="utmb-status-tag">${item.badge}</span>
+                </div>
+                ${logoImg}
+            </div>
+            <h3 class="utmb-race-title">${item.race}</h3>
+            <div class="utmb-race-category">${item.category}</div>
+            <div class="utmb-race-result">${item.result}</div>
+            ${noteHtml}
+            <div class="utmb-card-footer">
+                <span class="utmb-location">
+                    <img src="${item.flag}" alt="${item.location}" class="utmb-flag">
+                    ${item.location}
+                </span>
+                ${actionHtml}
+            </div>
+        `;
+        container.appendChild(card);
     });
 }
 

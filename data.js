@@ -91,6 +91,68 @@ export const athleteData = {
         { year: 2026, event: "Sudamericano de Trail Running", location: "Samaipata, Bolivia", flag: "/banderas/bandera bolivia.svg", result: "7° General (43K)" },
         { year: 2027, event: "Mundial de Montaña y Trail Running", location: "Sudáfrica", flag: "/banderas/bandera sudafrica.svg", result: "Clasificado (Campeón Nacional Classic 15K)" }
     ],
+    utmbCircuit: [
+        {
+            year: 2026,
+            race: "Torrencial Chile by UTMB",
+            category: "Pilolcura 100K (106 km • +4.500m)",
+            location: "Valdivia, Chile",
+            flag: "/banderas/bandera chile.webp",
+            result: "1° Lugar General (11:35:02)",
+            badge: "Campeón 100K",
+            isPodiumFirst: true,
+            epicId: "torrencial2026"
+        },
+        {
+            year: 2025,
+            race: "Bariloche by UTMB",
+            category: "22K",
+            location: "San Carlos de Bariloche, Argentina",
+            flag: "/banderas/bandera argentina.webp",
+            result: "2° Lugar General",
+            badge: "Podio Internacional"
+        },
+        {
+            year: 2025,
+            race: "OCC – Ultra-Trail du Mont-Blanc",
+            category: "50K+ • UTMB World Series Finals",
+            location: "Chamonix, Francia",
+            flag: "https://flagcdn.com/w40/fr.png",
+            result: "43° General (5h 48m)",
+            note: "2° mejor tiempo histórico de Chile entre 1.568 corredores",
+            badge: "Final Mundial Chamonix",
+            isFinals: true
+        },
+        {
+            year: 2025,
+            race: "Torrencial Valdivia by UTMB",
+            category: "53K",
+            location: "Valdivia, Chile",
+            flag: "/banderas/bandera chile.webp",
+            result: "1° Lugar General",
+            badge: "Campeón 53K",
+            isPodiumFirst: true
+        },
+        {
+            year: 2024,
+            race: "Quito Trail by UTMB",
+            category: "50K",
+            location: "Quito, Ecuador",
+            flag: "https://flagcdn.com/w40/ec.png",
+            result: "3° Lugar General",
+            badge: "Podio Internacional",
+            link: "https://runchile.cl/luis-valle-3en-los-50k-del-quito-trail-by-utmb-todos-los-chilenos/"
+        },
+        {
+            year: 2024,
+            race: "Valhöll Argentina by UTMB",
+            category: "55K",
+            location: "Villa General Belgrano, Argentina",
+            flag: "/banderas/bandera argentina.webp",
+            result: "3° Lugar General",
+            badge: "Podio Internacional"
+        }
+    ],
     results: [
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
         { year: 2012, race: "Desafío Senderos", distance: "8K", position: "1° General", country: "Chile", highlight: false },
@@ -204,11 +266,11 @@ export const athleteData = {
 
         { year: 2024, race: "Futangue Challenge", distance: "60K", position: "DNF (km 30)", country: "Chile", highlight: false },
         { year: 2024, race: "Cochrane Patagonia Trail", distance: "35K", position: "2° General", country: "Chile", highlight: false },
-        { year: 2024, race: "Valhöll by UTMB", distance: "55K", position: "3° General", country: "Argentina", highlight: true },
+        { year: 2024, race: "Valhöll by UTMB", distance: "55K", position: "3° General", country: "Argentina", highlight: true, utmb: true },
         { year: 2024, race: "Monte Verde", distance: "18K", position: "1° General", country: "Chile", highlight: false },
         { year: 2024, race: "Putaendo Trail Run", distance: "33K", position: "1° General", country: "Chile", highlight: false },
         { year: 2024, race: "Torrencial Valdivia", distance: "42K", position: "1° General", country: "Chile", highlight: true },
-        { year: 2024, race: "Quito Trail by UTMB", distance: "50K", position: "3° General", country: "Ecuador", highlight: true },
+        { year: 2024, race: "Quito Trail by UTMB", distance: "50K", position: "3° General", country: "Ecuador", highlight: true, utmb: true },
         { year: 2024, race: "Frontera Trail", distance: "30K", position: "2° General", country: "Chile", highlight: false },
         { year: 2024, race: "Trail Running Arica", distance: "22K", position: "1° General", country: "Chile", highlight: false },
         { year: 2024, race: "New Balance", distance: "15K", position: "1° General", country: "Chile", highlight: false },
@@ -221,12 +283,12 @@ export const athleteData = {
         { year: 2025, race: "Desafío Quillayquén", distance: "21K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "Maratón de Santiago", distance: "21K", position: "1h10'55''", country: "Chile", highlight: false },
         { year: 2025, race: "Santiago Sky Race", distance: "30K", position: "1° General", country: "Chile", highlight: false },
-        { year: 2025, race: "Torrencial Valdivia by UTMB", distance: "53K", position: "1° General", country: "Chile", highlight: true },
-        { year: 2025, race: "OCC – Ultra Trail du Mont-Blanc", distance: "50K+", position: "43° (5h48)", country: "Francia", highlight: true },
+        { year: 2025, race: "Torrencial Valdivia by UTMB", distance: "53K", position: "1° General", country: "Chile", highlight: true, utmb: true },
+        { year: 2025, race: "OCC – Ultra Trail du Mont-Blanc", distance: "50K+", position: "43° (5h48)", country: "Francia", highlight: true, utmb: true },
         { year: 2025, race: "Huallerupe Trail", distance: "22K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "Frontera Trail", distance: "30K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "K42 Series Villa La Angostura", distance: "42K", position: "1° General", country: "Argentina", highlight: true },
-        { year: 2025, race: "Bariloche by UTMB", distance: "22K", position: "2° General", country: "Argentina", highlight: false },
+        { year: 2025, race: "Bariloche by UTMB", distance: "22K", position: "2° General", country: "Argentina", highlight: true, utmb: true },
         { year: 2025, race: "El Cruce Saucony", distance: "100K", position: "6° General", country: "Argentina", highlight: false },
 
         { year: 2026, race: "Kutralkura Trail (Selectiva) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de enero</span>", distance: "35K", position: "2° General", country: "Chile", highlight: true },
@@ -235,7 +297,7 @@ export const athleteData = {
         { year: 2026, race: "Maratón de Temuco <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">15 de marzo</span>", distance: "42K", position: "3° General (2:29:30)", country: "Chile", highlight: true },
         { year: 2026, race: "Sudamericano Samaipata <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">18 de abril</span>", distance: "43K (+1600m)", position: "7° General", country: "Bolivia", highlight: true },
         { year: 2026, race: "Desafío Trail Running ParqueMet <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">17 de mayo</span>", distance: "21K (+1270m)", position: "1° General (02:00:35)", country: "Chile", highlight: true },
-        { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">26 de junio</span>", distance: "106km", position: "1° General", country: "Chile", highlight: true },
+        { year: 2026, race: "100K Torrencial Chile by UTMB (PILOLCURA) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">26 de junio</span>", distance: "106km", position: "1° General (11:35:02)", country: "Chile", highlight: true, utmb: true },
         { year: 2026, race: "Dynafit Transalpine Run (7 Etapas) <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">28 de agosto al 3 de septiembre</span>", distance: "258km", position: "1° General", country: "Suiza", highlight: true },
         { year: 2026, race: "Cascada Trail by Jetour <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">3 de octubre</span>", distance: "30K", position: "1° General", country: "Chile", highlight: true },
         { year: 2026, race: "CMPC Frontera Trail — Campeonato Nacional Classic <span style=\"font-size: 0.75em; font-weight: normal; color: var(--color-text-muted); display: block; margin-top: 2px;\">25 de octubre</span>", distance: "15K", position: "1° General (Campeón Nacional • 01:12:08)", country: "Chile", highlight: true },

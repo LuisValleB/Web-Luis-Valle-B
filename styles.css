@@ -455,6 +455,198 @@ ul { list-style: none; }
 .section-header p { color: var(--color-text-muted); font-size: 1.1rem; }
 section { padding: var(--section-padding); }
 
+/* ================== UTMB WORLD SERIES SECTION ================== */
+.utmb-circuit-section {
+    background: var(--color-bg-main);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.utmb-header-logos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 14px;
+    background: var(--color-bg-secondary);
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.utmb-section-logo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+.utmb-occ-logo {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+}
+.utmb-logo-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.15);
+}
+.utmb-summary-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+.utmb-stat-pill {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-main);
+    padding: 8px 18px;
+    border-radius: 24px;
+    font-size: 0.92rem;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+}
+.utmb-stat-pill strong {
+    color: #9e3a26;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-right: 4px;
+}
+.utmb-circuit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 22px;
+}
+.utmb-card {
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+    padding: 24px;
+    border-top: 4px solid var(--color-accent-green);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+.utmb-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.utmb-card-winner {
+    border-top-color: var(--color-accent-orange);
+    background: #fcfaf5;
+}
+.utmb-card-finals {
+    border-top-color: #9e3a26;
+    background: #fdfaf7;
+}
+.utmb-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 10px;
+}
+.utmb-card-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.utmb-year-tag {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    background: rgba(0, 0, 0, 0.06);
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+.utmb-status-tag {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(107, 132, 116, 0.14);
+    color: var(--color-accent-green);
+    font-weight: 600;
+}
+.utmb-card-winner .utmb-status-tag {
+    background: rgba(194, 118, 68, 0.15);
+    color: var(--color-accent-orange);
+}
+.utmb-card-finals .utmb-status-tag {
+    background: rgba(158, 58, 38, 0.12);
+    color: #9e3a26;
+}
+.utmb-card-brand-logo {
+    height: 18px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+.utmb-race-title {
+    font-size: 1.35rem;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+.utmb-race-category {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+}
+.utmb-race-result {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-accent-orange);
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+}
+.utmb-card-finals .utmb-race-result {
+    color: #9e3a26;
+}
+.utmb-card-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.utmb-card-footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.utmb-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+.utmb-flag {
+    height: 13px;
+    width: auto;
+    border-radius: 2px;
+}
+.utmb-card-action {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent-green);
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.utmb-card-action:hover {
+    color: var(--color-accent-orange);
+}
+
 /* ================== TIMELINE ================== */
 .timeline-section { background: var(--color-bg-secondary); }
 .timeline-filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
@@ -533,7 +725,41 @@ section { padding: var(--section-padding); }
 }
 .timeline-item:nth-child(even) .timeline-content { margin-left: 10%; }
 .timeline-item:nth-child(odd) .timeline-content { margin-right: 10%; }
-.tl-year { font-size: 0.85rem; color: var(--color-accent-orange); font-weight: bold; margin-bottom: 5px; display: block; }
+.tl-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+.tl-year { font-size: 0.85rem; color: var(--color-accent-orange); font-weight: bold; display: inline-block; }
+.tl-utmb-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(158, 58, 38, 0.09);
+    color: #9e3a26;
+    border: 1px solid rgba(158, 58, 38, 0.22);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.tl-utmb-tag img {
+    height: 10px;
+    width: auto;
+    object-fit: contain;
+}
+.timeline-content-utmb {
+    border-left: 4px solid #9e3a26;
+    background: #fdfaf6;
+}
+.timeline-marker-utmb {
+    border-color: #9e3a26;
+}
 .tl-race { font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 5px; }
 .tl-meta { font-size: 0.9rem; color: var(--color-text-muted); display: flex; gap: 15px; }
 .tl-position { font-weight: bold; color: var(--color-text-main); }
