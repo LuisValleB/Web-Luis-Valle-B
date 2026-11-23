@@ -463,36 +463,72 @@ function initUtmbCircuit() {
             ? `<img src="/logos/occ.png" alt="OCC UTMB" class="utmb-card-brand-logo">`
             : `<img src="/logos/utmb.png" alt="UTMB" class="utmb-card-brand-logo">`;
 
+        const mediaHtml = item.image
+            ? `<div class="utmb-card-media" data-gallery-idx="${item.galleryIndex}">
+                   <img src="/circuito utmb/${item.image}" alt="${item.race}" class="utmb-card-img" style="object-position: ${item.imagePos || 'center'};" loading="lazy">
+                   <span class="utmb-photo-zoom">Ver foto</span>
+               </div>`
+            : `<div class="utmb-card-media utmb-card-media-finals">
+                   <img src="/logos/occ.png" alt="OCC Chamonix" class="utmb-finals-hero-logo">
+                   <span class="utmb-finals-hero-sub">UTMB® World Series Finals • Chamonix</span>
+               </div>`;
+
         const noteHtml = item.note ? `<p class="utmb-card-note">${item.note}</p>` : '';
         let actionHtml = '';
         if (item.epicId) {
-            actionHtml = `<button type="button" class="utmb-card-action" onclick="toggleEpic('${item.epicId}')">Ver crónica y fotos →</button>`;
+            actionHtml = `<button type="button" class="utmb-card-action" onclick="toggleEpic('${item.epicId}')">Ver crónica 100K →</button>`;
         } else if (item.link) {
             actionHtml = `<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="utmb-card-action">Prensa: Runchile →</a>`;
         }
 
         card.innerHTML = `
-            <div class="utmb-card-top">
-                <div class="utmb-card-badges">
-                    <span class="utmb-year-tag">${item.year}</span>
-                    <span class="utmb-status-tag">${item.badge}</span>
+            ${mediaHtml}
+            <div class="utmb-card-body">
+                <div class="utmb-card-top">
+                    <div class="utmb-card-badges">
+                        <span class="utmb-year-tag">${item.year}</span>
+                        <span class="utmb-status-tag">${item.badge}</span>
+                    </div>
+                    ${logoImg}
                 </div>
-                ${logoImg}
-            </div>
-            <h3 class="utmb-race-title">${item.race}</h3>
-            <div class="utmb-race-category">${item.category}</div>
-            <div class="utmb-race-result">${item.result}</div>
-            ${noteHtml}
-            <div class="utmb-card-footer">
-                <span class="utmb-location">
-                    <img src="${item.flag}" alt="${item.location}" class="utmb-flag">
-                    ${item.location}
-                </span>
-                ${actionHtml}
+                <h3 class="utmb-race-title">${item.race}</h3>
+                <div class="utmb-race-category">${item.category}</div>
+                <div class="utmb-race-result">${item.result}</div>
+                ${noteHtml}
+                <div class="utmb-card-footer">
+                    <span class="utmb-location">
+                        <img src="${item.flag}" alt="${item.location}" class="utmb-flag">
+                        ${item.location}
+                    </span>
+                    ${actionHtml}
+                </div>
             </div>
         `;
+
+        const mediaEl = card.querySelector('.utmb-card-media[data-gallery-idx]');
+        if (mediaEl && athleteData.utmbGallery) {
+            mediaEl.addEventListener('click', () => {
+                const idx = parseInt(mediaEl.getAttribute('data-gallery-idx'), 10) || 0;
+                openLightbox(idx, athleteData.utmbGallery, '/circuito utmb/');
+            });
+        }
+
         container.appendChild(card);
     });
+
+    const galleryContainer = document.getElementById('utmb-gallery-container');
+    if (galleryContainer && athleteData.utmbGallery) {
+        galleryContainer.innerHTML = '';
+        athleteData.utmbGallery.forEach((imgSrc, index) => {
+            const wrap = document.createElement('div');
+            wrap.className = 'tar-thumb-wrapper';
+            if (index >= 6) wrap.style.display = 'none';
+            wrap.innerHTML = `<img src="/circuito utmb/${imgSrc}" alt="Circuito UTMB Foto ${index + 1}" loading="lazy">`;
+            wrap.addEventListener('click', () => openLightbox(index, athleteData.utmbGallery, '/circuito utmb/'));
+            galleryContainer.appendChild(wrap);
+        });
+        if (athleteData.utmbGallery.length > 6) addLoadMoreButton(galleryContainer);
+    }
 }
 
 function initSelection() {

@@ -101,16 +101,22 @@ export const athleteData = {
             result: "1° Lugar General (11:35:02)",
             badge: "Campeón 100K",
             isPodiumFirst: true,
+            image: "torrencial 2026.jpg",
+            imagePos: "center 20%",
+            galleryIndex: 0,
             epicId: "torrencial2026"
         },
         {
             year: 2025,
             race: "Bariloche by UTMB",
-            category: "22K",
+            category: "Arrayanes 22K",
             location: "San Carlos de Bariloche, Argentina",
             flag: "/banderas/bandera argentina.webp",
             result: "2° Lugar General",
-            badge: "Podio Internacional"
+            badge: "Podio Internacional",
+            image: "bariloche 2025.jpg",
+            imagePos: "center 20%",
+            galleryIndex: 2
         },
         {
             year: 2025,
@@ -118,7 +124,7 @@ export const athleteData = {
             category: "50K+ • UTMB World Series Finals",
             location: "Chamonix, Francia",
             flag: "https://flagcdn.com/w40/fr.png",
-            result: "43° General (5h 48m)",
+            result: "42° General (5h 48m)",
             note: "2° mejor tiempo histórico de Chile entre 1.568 corredores",
             badge: "Final Mundial Chamonix",
             isFinals: true
@@ -131,27 +137,46 @@ export const athleteData = {
             flag: "/banderas/bandera chile.webp",
             result: "1° Lugar General",
             badge: "Campeón 53K",
-            isPodiumFirst: true
+            isPodiumFirst: true,
+            image: "torrencial 2025.jpg",
+            imagePos: "center 25%",
+            galleryIndex: 3
         },
         {
             year: 2024,
             race: "Quito Trail by UTMB",
-            category: "50K",
+            category: "Nutria 50K",
             location: "Quito, Ecuador",
             flag: "https://flagcdn.com/w40/ec.png",
             result: "3° Lugar General",
             badge: "Podio Internacional",
+            image: "quito trail 2024.JPG",
+            imagePos: "center 20%",
+            galleryIndex: 4,
             link: "https://runchile.cl/luis-valle-3en-los-50k-del-quito-trail-by-utmb-todos-los-chilenos/"
         },
         {
             year: 2024,
             race: "Valhöll Argentina by UTMB",
-            category: "55K",
+            category: "Challenge 55K",
             location: "Villa General Belgrano, Argentina",
             flag: "/banderas/bandera argentina.webp",
             result: "3° Lugar General",
-            badge: "Podio Internacional"
+            badge: "Podio Internacional",
+            image: "valholl 2024 2.JPG",
+            imagePos: "center 20%",
+            galleryIndex: 6
         }
+    ],
+    utmbGallery: [
+        "torrencial 2026.jpg",
+        "torrencial 2026 2.jpg",
+        "bariloche 2025.jpg",
+        "torrencial 2025.jpg",
+        "quito trail 2024.JPG",
+        "quito trail 2024 2.JPG",
+        "valholl 2024 2.JPG",
+        "valholl 2024.JPEG"
     ],
     results: [
         { year: 2012, race: "The North Face Endurance Challenge", distance: "10K", position: "1° General", country: "Chile", highlight: false },
@@ -284,7 +309,7 @@ export const athleteData = {
         { year: 2025, race: "Maratón de Santiago", distance: "21K", position: "1h10'55''", country: "Chile", highlight: false },
         { year: 2025, race: "Santiago Sky Race", distance: "30K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "Torrencial Valdivia by UTMB", distance: "53K", position: "1° General", country: "Chile", highlight: true, utmb: true },
-        { year: 2025, race: "OCC – Ultra Trail du Mont-Blanc", distance: "50K+", position: "43° (5h48)", country: "Francia", highlight: true, utmb: true },
+        { year: 2025, race: "OCC – Ultra Trail du Mont-Blanc", distance: "50K+", position: "42° (5h48)", country: "Francia", highlight: true, utmb: true },
         { year: 2025, race: "Huallerupe Trail", distance: "22K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "Frontera Trail", distance: "30K", position: "1° General", country: "Chile", highlight: false },
         { year: 2025, race: "K42 Series Villa La Angostura", distance: "42K", position: "1° General", country: "Argentina", highlight: true },
